@@ -1,0 +1,12 @@
+.serviceCounterContainer {
+    margin-top: 50px;
+    font-family: 'Signika Negative', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.serviceCounterNumber {
+
+    font-size: 100px;
+}
