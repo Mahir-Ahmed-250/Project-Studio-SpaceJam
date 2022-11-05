@@ -1,0 +1,15 @@
+.videoPlayerContainer {
+    margin-top: 80px;
+}
+
+.videoPlayer {
+    height: 600px;
+    width: 55%;
+}
+
+@media screen and (max-width: 760px) {
+    .videoPlayer {
+        height: 250px;
+        width: 90%;
+    }
+}

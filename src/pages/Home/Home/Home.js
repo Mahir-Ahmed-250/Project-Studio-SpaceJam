@@ -1,14 +1,16 @@
 import React from 'react';
-import Nav from '../../../shared/Nav/Nav';
+import AboutCompany from '../AboutCompany/AboutCompany';
 import HomeBanners from '../HomeBanners/HomeBanners/HomeBanners';
 import ServiceAndCompanyCounter from '../ServiceAndCompanyCounter/ServiceAndCompanyCounter';
+import Video from '../Video/Video';
 
 const Home = () => {
     return (
         <>
-            <Nav />
             <HomeBanners />
             <ServiceAndCompanyCounter />
+            <AboutCompany />
+            <Video />
         </>
     );
 };

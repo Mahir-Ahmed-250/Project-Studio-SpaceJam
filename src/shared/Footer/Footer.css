@@ -1,0 +1,39 @@
+.footerContainer {
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+.footerItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 50px;
+}
+
+.footerItem {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footerCompanyName {
+    font-family: 'Oswald', sans-serif;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.footerItem2 {
+    margin-top: 50px;
+}
+
+.footerItemTitle {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+@media screen and (max-width: 760px) {
+    .footerItems {
+        flex-direction: column;
+        margin-left: 25px;
+    }
+}

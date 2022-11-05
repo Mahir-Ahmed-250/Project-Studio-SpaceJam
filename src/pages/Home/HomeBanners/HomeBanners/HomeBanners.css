@@ -1,0 +1,11 @@
+.bannerImg {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+    .bannerImg {
+        height: 400px;
+
+    }
+}

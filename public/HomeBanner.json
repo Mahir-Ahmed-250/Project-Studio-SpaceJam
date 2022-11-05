@@ -1,13 +1,34 @@
 [
     {
         "serial":1,
-        "img1":"./assets/carousuel picture/c1.jpg",
-        "img2":"./assets/carousuel picture/c2.jpg",
-        "img3":"./assets/carousuel picture/c3.jpg",
-        "img4":"./assets/carousuel picture/c4.jpg",
-        "img5":"./assets/carousuel picture/c5.jpg",
-        "img6":"./assets/carousuel picture/c6.jpg",
-        "img7":"./assets/carousuel picture/c7.jpg",
-        "img8":"./assets/carousuel picture/c8.jpg"
+        "img1":"./assets/carousuel picture/c1.jpg"
+     },
+     {
+        "serial":2,
+        "img1":"./assets/carousuel picture/c2.jpg"
+     },
+     {
+        "serial":3,
+        "img1":"./assets/carousuel picture/c3.jpg"
+     },
+     {
+        "serial":4,
+        "img1":"./assets/carousuel picture/c4.jpg"
+     },
+     {
+        "serial":5,
+        "img1":"./assets/carousuel picture/c5.jpg"
+     },
+     {
+        "serial":6,
+        "img1":"./assets/carousuel picture/c6.jpg"
+     },
+     {
+        "serial":7,
+        "img1":"./assets/carousuel picture/c7.jpg"
+     },
+     {
+        "serial":8,
+        "img1":"./assets/carousuel picture/c8.jpg"
      }
 ]

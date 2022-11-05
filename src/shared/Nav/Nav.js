@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo/logo.jpg';
 import './Nav.css';
 import { BiMenuAltRight } from "@react-icons/all-files/bi/BiMenuAltRight";
+import Toggle from '../../components/Toggle/Toggle';
+import { ThemeContext } from '../../context';
 
 const Nav = () => {
     const [navBackground, setNavBackground] = useState(false)
@@ -21,42 +23,44 @@ const Nav = () => {
 
         }
     }, [])
+    const theme = useContext(ThemeContext)
+    const darkMode = theme.state.darkMode
+
     return (
         <nav class="navbar navbar-expand-md fixed-top" style={{
-            transition: '.35s ease-in-out', backgroundColor: navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
+            transition: '.35s ease-in-out', backgroundColor: darkMode ? navBackground ? '#161616' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
         }}>
-            <div class="container ">
-                <div className='logoAndName'>
+            <div class="container">
+                <div className='logoAndName' >
                     <NavLink to="/">
                         <img src={logo} height="60" width="60" alt="logo" className='me-2' />
                     </NavLink>
                     <NavLink to="/">
                         <h5 className='navCompanyName' style={{
-                            color: navBackground ? '#161616' : '#fff'
+                            color: navBackground && darkMode ? '#fff' : '#ffbb00'
                         }}>STUDIO SPACEJAM</h5>
                     </NavLink>
                 </div>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <BiMenuAltRight size={40} color="#161616" />
+                    <BiMenuAltRight size={40} color="#ffbb00" />
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <h5 className='ms-auto navLink' style={{
-                        color: navBackground ? '#161616' : '#fff'
-                    }}>Home</h5>
-                    <h5 className='navLink' style={{
-                        color: navBackground ? '#161616' : '#fff'
-                    }}>Team</h5>
-                    <h5 className='navLink' style={{
-                        color: navBackground ? '#161616' : '#fff'
-                    }}>Portfolio</h5>
-                    <h5 className='navLink' style={{
-                        color: navBackground ? '#161616' : '#fff'
-                    }}>Contact</h5>
-                    <label class="switch">
-                        <input type="checkbox" />
-                        <span class="slider round"></span>
-                    </label>
+                    <h5 className='ms-auto navLink'>
+                        <NavLink to="/" className="navigation" style={{ textDecoration: "none", color: navBackground && darkMode ? '#fff' : '#ffbb00' }}> Home </NavLink>
+                    </h5>
+
+                    <h5 className='navLink'>
+                        <NavLink to="/team" className="navigation" style={{ textDecoration: "none", color: navBackground && darkMode ? '#fff' : '#ffbb00' }}> Team </NavLink>
+                    </h5>
+                    <h5 className='navLink'>
+                        <NavLink to="/portfolio" className="navigation" style={{ textDecoration: "none", color: navBackground && darkMode ? '#fff' : '#ffbb00' }}> Portfolio </NavLink>
+                    </h5>
+                    <h5 className='navLink'>
+                        <NavLink to="/contact" className="navigation" style={{ textDecoration: "none", color: navBackground && darkMode ? '#fff' : '#ffbb00' }}> Contact</NavLink>
+                    </h5>
+                    <Toggle />
                 </div>
             </div>
         </nav>

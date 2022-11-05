@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import HomeBanner from '../HomeBanner/HomeBanner';
+import { Swiper } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
+import SwiperCore from 'swiper';
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import './HomeBanners.css';
+
+SwiperCore.use([Navigation]);
+
 
 const HomeBanners = () => {
     const [banners, setBanners] = useState([]);
@@ -11,9 +18,30 @@ const HomeBanners = () => {
 
     return (
         <>
-            {
-                banners.map(banner => <HomeBanner key={banner.serial} banner={banner} />)
-            }
+            <Swiper
+                slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
+                effect={"fade"}
+                navigation={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination, Autoplay]}
+                className="mySwiper"
+            >
+
+                {
+                    banners.map(banner =>
+                        <SwiperSlide key={banner.serial} >
+                            <img src={banner.img1} className="bannerImg" alt="" />
+                        </SwiperSlide>)
+                }
+
+            </Swiper>
+
         </>
     );
 };
