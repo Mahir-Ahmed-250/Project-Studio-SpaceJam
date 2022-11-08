@@ -27,10 +27,10 @@ const Nav = () => {
     const darkMode = theme.state.darkMode
 
     return (
-        <nav class="navbar navbar-expand-md fixed-top" style={{
+        <nav className="navbar navbar-expand-md fixed-top" style={{
             transition: '.35s ease-in-out', backgroundColor: darkMode ? navBackground ? '#161616' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
         }}>
-            <div class="container">
+            <div className="container">
                 <div className='logoAndName' >
                     <NavLink to="/">
                         <img src={logo} height="60" width="60" alt="logo" className='me-2' />
@@ -42,11 +42,11 @@ const Nav = () => {
                     </NavLink>
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <BiMenuAltRight size={40} color="#ffbb00" />
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarScroll">
+                <div className="collapse navbar-collapse" id="navbarScroll">
                     <h5 className='ms-auto navLink'>
                         <NavLink to="/" className="navigation" style={{ textDecoration: "none", color: navBackground && darkMode ? '#fff' : '#ffbb00' }}> Home </NavLink>
                     </h5>

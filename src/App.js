@@ -4,10 +4,12 @@ import Home from './pages/Home/Home/Home';
 import { useContext, useLayoutEffect } from 'react';
 import { ThemeContext } from './context';
 import Team from './pages/Team/Team';
-import Portfolios from './pages/Portfolio/Portfolios';
+
 import Contact from './pages/Contact/Contact';
 import Nav from './shared/Nav/Nav';
 import Footer from './shared/Footer/Footer';
+import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
+import { useEffect } from 'react';
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -25,7 +27,7 @@ function App() {
     <Wrapper>
       <div style={{ backgroundColor: darkMode ? "#161616" : "#fff", color: darkMode && "#fff" }}>
         <Nav />
-        <Routes>
+        <Routes >
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path='/portfolio' element={<Portfolios />} />
