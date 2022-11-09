@@ -23,14 +23,9 @@ const Portfolios = () => {
                 <BannerTitle title="PORTFOLIO" />
             </div>
             <div className='portfolios container'>
-                <div className="row">
-                    {
-                        portfolios.map((portfolio, index) => <Portfolio key={portfolio.key} index={index} portfolio={portfolio} />)
-                    }
-
-
+                <div className="">
+                    <Portfolio portfolios={portfolios} />
                 </div>
-
             </div>
         </div>
     </>

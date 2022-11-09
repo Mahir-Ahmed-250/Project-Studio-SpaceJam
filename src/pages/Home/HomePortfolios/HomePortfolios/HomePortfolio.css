@@ -1,3 +1,7 @@
 .homePortfolioContainer {
     margin-top: 100px;
 }
+
+.swiper-pagination-bullets {
+    display: none;
+}
