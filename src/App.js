@@ -4,12 +4,13 @@ import Home from './pages/Home/Home/Home';
 import { useContext, useLayoutEffect } from 'react';
 import { ThemeContext } from './context';
 import Team from './pages/Team/Team';
-
 import Contact from './pages/Contact/Contact';
 import Nav from './shared/Nav/Nav';
 import Footer from './shared/Footer/Footer';
 import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
-import { useEffect } from 'react';
+import { ToastContainer, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
+        <ToastContainer transition={Slide} />
       </div>
     </Wrapper>
 

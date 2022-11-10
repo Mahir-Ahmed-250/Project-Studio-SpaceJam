@@ -70,15 +70,18 @@ const HomePortfolios = () => {
                     portfolios.map(portfolio =>
 
                         <SwiperSlide key={portfolio.serial} >
-                            <Link to="portfolio">
-                                <img src={portfolio.img} style={{ height: "400px" }} className="bannerImg" alt="" />
-                            </Link>
+
+                            <img src={portfolio.img} style={{ height: "400px" }} className="bannerImg" alt="" />
+
                         </SwiperSlide>
                     )
                 }
 
 
             </Swiper>
+            <center>
+                <Link to="/portfolio"> <button className="moreBtn">SHOW MORE</button></Link>
+            </center>
         </div >
     );
 };

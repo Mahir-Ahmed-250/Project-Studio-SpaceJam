@@ -7,7 +7,7 @@ const ServiceAndCompanyCounter = () => {
     return (
         <div className="serviceCounterContainer">
             <div>
-                <CountUp end={9} redraw={true} duration={1}>
+                <CountUp end={10} redraw={true} duration={1}>
                     {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                             <span className='serviceCounterNumber' ref={countUpRef} />
@@ -17,7 +17,7 @@ const ServiceAndCompanyCounter = () => {
                 <h3>Years of Services</h3>
             </div>
             <div className='ms-5'>
-                <CountUp end={106} redraw={true} duration={1}>
+                <CountUp end={116} redraw={true} duration={1}>
                     {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                             <span className='serviceCounterNumber' ref={countUpRef} />

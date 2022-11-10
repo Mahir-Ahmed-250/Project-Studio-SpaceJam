@@ -3,21 +3,21 @@
         "serial":1,
         "src":"./assets/portfolio/1.jpg",
         "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":7,
+        "width":8,
         "height":5
     },
     {
         "serial":2,
         "src":"./assets/portfolio/2.jpg", 
         "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":7,
+        "width":8,
         "height":5
     },
     {
         "serial":3,
         "src":"./assets/portfolio/3.jpg",
            "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":7,
+        "width":8,
         "height":5
     },
     {

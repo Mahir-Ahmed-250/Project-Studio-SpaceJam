@@ -5,3 +5,22 @@
 .swiper-pagination-bullets {
     display: none;
 }
+
+.moreBtn {
+    border: none;
+    height: 46px;
+    width: 154px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    background: linear-gradient(to left, #e2e2e2 50%, #5c5c5c 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    margin-top: 80px;
+}
+
+.moreBtn:hover {
+    background-position: left bottom;
+    color: #fff;
+}

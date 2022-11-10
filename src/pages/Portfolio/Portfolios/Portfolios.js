@@ -5,6 +5,7 @@ import BannerTitle from '../../../components/BannerTitle/BannerTitle';
 import Portfolio from '../Portfolio/Portfolio';
 import './Portfolio.css';
 
+
 const Portfolios = () => {
     const [portfolios, setPortfolios] = useState([]);
 
@@ -16,7 +17,6 @@ const Portfolios = () => {
 
 
     return (<>
-
         <div className="portfolioContainer">
 
             <div className="portfolioBannerContainer">

@@ -17,7 +17,7 @@ const HomeBanners = () => {
     }, [])
 
     return (
-        <>
+        <div>
             <Swiper
                 slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
                 effect={"fade"}
@@ -42,7 +42,7 @@ const HomeBanners = () => {
 
             </Swiper>
 
-        </>
+        </div>
     );
 };
 
