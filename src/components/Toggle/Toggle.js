@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context';
-import { toast } from 'react-toastify';
 import './Toggle.css';
 
 
@@ -39,25 +38,9 @@ const Toggle = () => {
 
     const handleClick = () => {
         theme.dispatch({ type: "TOGGLE" })
-        if (selected1) {
-            toast.success("Successfully Switched to Dark Mode!", {
-                position: "bottom-right",
-                hideProgressBar: true,
-                theme: "light"
-            })
-        }
-        else {
-            toast.success("Successfully Switched to Light Mode!", {
-                position: "bottom-right",
-                hideProgressBar: true,
-                theme: "dark"
-            })
-        }
-
     }
     return (
         <>
-
             <ToggleSwitch checked={selected1}
                 id='toggle-switch-1'
                 onChange={

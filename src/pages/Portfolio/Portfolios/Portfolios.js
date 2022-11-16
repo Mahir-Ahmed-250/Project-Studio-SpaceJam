@@ -16,19 +16,19 @@ const Portfolios = () => {
     }, [])
 
 
-    return (<>
-        <div className="portfolioContainer">
-
-            <div className="portfolioBannerContainer">
-                <BannerTitle title="PORTFOLIO" />
-            </div>
-            <div className='portfolios container'>
-                <div className="">
-                    <Portfolio portfolios={portfolios} />
+    return (
+        <>
+            <div className="portfolioContainer">
+                <div className="portfolioBannerContainer">
+                    <BannerTitle title="PORTFOLIO" />
+                </div>
+                <div className='portfolios container'>
+                    <div className="">
+                        <Portfolio portfolios={portfolios} />
+                    </div>
                 </div>
             </div>
-        </div>
-    </>
+        </>
 
     );
 };

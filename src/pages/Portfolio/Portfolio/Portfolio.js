@@ -4,6 +4,9 @@ import { useState } from 'react';
 import { MdCancel } from "@react-icons/all-files/md/MdCancel";
 import { GrFormPrevious } from "@react-icons/all-files/gr/GrFormPrevious";
 import { GrFormNext } from "@react-icons/all-files/gr/GrFormNext";
+import { ThemeContext } from '../../../context';
+import { useContext } from 'react';
+
 
 const Portfolio = ({ portfolios }) => {
 
@@ -33,8 +36,11 @@ const Portfolio = ({ portfolios }) => {
             ? setSlideNumber(0)
             : setSlideNumber(slideNumber + 1)
     }
+
+    const theme = useContext(ThemeContext)
+    const darkMode = theme.state.darkMode
     return (
-        <div className=''>
+        <div>
 
             {openModal &&
                 <div className='sliderWrap'>
@@ -42,12 +48,16 @@ const Portfolio = ({ portfolios }) => {
                     <GrFormPrevious className='btnPrev' onClick={prevSlide} />
                     <GrFormNext className='btnNext' onClick={nextSlide} />
                     <div className='fullScreenImage'>
-
                         <img src={portfolios[slideNumber].src} alt='' />
-
+                        <div className='portfolio-desc' style={{ color: darkMode ? '#fff' : '#ffbb00' }}>
+                            <h3>Name: College Park</h3>
+                            <h3>Location: Dhaka Uddan, Mohammadpur, Dhaka, Bangladesh</h3>
+                            <h3>Size: 1050sqft</h3>
+                            <h3>Unit: 4</h3>
+                            <h3>Floor: 10</h3>
+                        </div>
 
                     </div>
-
                 </div>
             }
 
@@ -61,7 +71,7 @@ const Portfolio = ({ portfolios }) => {
                                 onClick={() => handleOpenModal(index)}
                             >
                                 <figure class="gallery__link">
-                                    <img src={slide.src} alt='' width="100%" className='mb-3 gallery__image' />
+                                    <img src={slide.src} alt='' width="100%" className=' gallery__image' />
                                 </figure>
                             </div>
                         )

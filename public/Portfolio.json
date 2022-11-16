@@ -1,44 +1,26 @@
 [
     {
         "serial":1,
-        "src":"./assets/portfolio/1.jpg",
-        "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":8,
-        "height":5
+        "src":"https://i.ibb.co/X77rqTg/1.jpg"
     },
     {
         "serial":2,
-        "src":"./assets/portfolio/2.jpg", 
-        "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":8,
-        "height":5
+        "src":"https://i.ibb.co/WDDFL67/2.jpg"
     },
     {
         "serial":3,
-        "src":"./assets/portfolio/3.jpg",
-           "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":8,
-        "height":5
+        "src":"https://i.ibb.co/S5r71Yp/3.jpg"
     },
     {
         "serial":4,
-        "src":"./assets/portfolio/4.jpg",
-           "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":7,
-        "height":5
+        "src":"https://i.ibb.co/3m901CZ/4.jpg"
     },
     {
         "serial":5,
-        "src":"./assets/portfolio/5.jpg",
-           "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":7,
-        "height":5
+        "src":"https://i.ibb.co/k8fJJvB/5.jpg"
     },
     {
         "serial":6,
-        "src":"./assets/portfolio/6.jpg",
-           "sizes": ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-        "width":7,
-        "height":5
+        "src":"https://i.ibb.co/fD4HFbW/6.jpg"
     }
 ]

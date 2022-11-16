@@ -8,8 +8,8 @@ import Contact from './pages/Contact/Contact';
 import Nav from './shared/Nav/Nav';
 import Footer from './shared/Footer/Footer';
 import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
-import { ToastContainer, Slide } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 const Wrapper = ({ children }) => {
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <Wrapper>
-      <div style={{ backgroundColor: darkMode ? "#161616" : "#fff", color: darkMode && "#fff" }}>
+      <div style={{ backgroundColor: darkMode ? "#161616" : "#fff", color: darkMode && "#fff", transition: "0.5s" }}>
         <Nav />
         <Routes >
           <Route path="/" element={<Home />} />
@@ -36,7 +36,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
-        <ToastContainer transition={Slide} />
+
       </div>
     </Wrapper>
 
