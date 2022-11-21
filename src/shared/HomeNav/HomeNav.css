@@ -1,0 +1,109 @@
+.navContainer {
+    display: flex;
+}
+
+.topBar {
+    margin-left: 133px;
+}
+
+.homeSideNav {
+    position: absolute;
+    margin-top: 450px;
+}
+
+.homeNavLogoContainer-1 {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+    background-color: #272727;
+    text-decoration: none;
+}
+
+.homeNavLogoAndName-1 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.homeNavName-1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.homeNavLogoContainer-2 {
+    display: none !important;
+}
+
+
+.homeNavLogoContainer-3 {}
+
+.homeNavName-3 {
+    font-family: 'Oswald', sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+
+/* .navLink {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px !important;
+    font-weight: 300;
+    color: #fff !important;
+    text-transform: uppercase;
+    
+} */
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+
+}
+
+.navbar-toggler {
+    border: none !important;
+
+}
+
+@media only screen and (max-width: 1080px) {
+    .homeNavName-3 {
+        font-size: 25px;
+        margin-top: -3px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .homeNavLogoContainer-1 {
+        display: none;
+    }
+
+    .homeSideNav {
+        display: none;
+    }
+
+    .topBar {
+        margin: 0;
+    }
+
+    .homeNavLogoContainer-2 {
+        display: block !important;
+        display: flex !important;
+    }
+
+
+    .homeNavName-2 {
+        font-family: 'Oswald', sans-serif;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 25px;
+    }
+}

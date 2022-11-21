@@ -136,6 +136,9 @@
         align-items: center;
     }
 
+    .sliderWrap .btnClose {
+        top: 180px
+    }
 
     .sliderWrap .btnPrev,
     .sliderWrap .btnNext {

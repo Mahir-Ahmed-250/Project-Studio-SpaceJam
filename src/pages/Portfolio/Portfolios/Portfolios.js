@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import BannerTitle from '../../../components/BannerTitle/BannerTitle';
+import Nav from '../../../shared/Nav/Nav';
 import Portfolio from '../Portfolio/Portfolio';
 import './Portfolio.css';
 
@@ -18,6 +19,7 @@ const Portfolios = () => {
 
     return (
         <>
+            <Nav />
             <div className="portfolioContainer">
                 <div className="portfolioBannerContainer">
                     <BannerTitle title="PORTFOLIO" />

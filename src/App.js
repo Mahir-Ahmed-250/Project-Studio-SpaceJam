@@ -5,7 +5,6 @@ import { useContext, useLayoutEffect } from 'react';
 import { ThemeContext } from './context';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
-import Nav from './shared/Nav/Nav';
 import Footer from './shared/Footer/Footer';
 import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
 
@@ -27,7 +26,7 @@ function App() {
   return (
     <Wrapper>
       <div style={{ backgroundColor: darkMode ? "#161616" : "#fff", color: darkMode && "#fff", transition: "0.5s" }}>
-        <Nav />
+
         <Routes >
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />

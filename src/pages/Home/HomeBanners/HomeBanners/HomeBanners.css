@@ -6,6 +6,12 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {}
 
+@media screen and (max-width: 1080px) {
+    .bannerImg {
+        height: 500px;
+    }
+}
+
 @media screen and (max-width: 760px) {
     .bannerImg {
         height: 400px;

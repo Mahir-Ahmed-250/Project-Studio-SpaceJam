@@ -43,13 +43,19 @@
     width: 100%;
 }
 
+@media screen and (max-width:1080px) {
+    .navCompanyName {
+        font-size: 25px;
+        margin-top: -3px;
+    }
+}
+
 @media screen and (max-width: 760px) {
     nav {
         position: sticky !important;
     }
 
     .navCompanyName {
-
         font-size: 22px;
     }
 
