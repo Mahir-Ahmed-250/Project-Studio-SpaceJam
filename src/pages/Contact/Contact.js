@@ -1,12 +1,23 @@
 import React from 'react';
+import BannerTitle from '../../components/BannerTitle/BannerTitle';
 import Nav from '../../shared/Nav/Nav';
+import './Contact.css';
 
 const Contact = () => {
     return (
-        <div style={{ marginTop: "80px", height: "100vh" }}>
+        <>
             <Nav />
-            <h2>THIS IS CONTACT</h2>
-        </div>
+            <div className="portfolioContainer">
+                <div className="contactBannerContainer">
+                    <BannerTitle title="CONTACT US" />
+                </div>
+                <div className='portfolios container'>
+                    <div className="">
+
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };
 

@@ -1,0 +1,23 @@
+.contactBannerContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../assets/banners/3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 250px 0px 150px;
+}
+
+@media screen and (max-width: 1080px) {
+    .contactBannerContainer {
+        background-attachment: scroll;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 250px 0px 80px;
+    }
+
+
+}
+
+@media screen and (max-width: 760px) {
+    .contactBannerContainer {
+        padding: 100px 0px 80px;
+    }
+}

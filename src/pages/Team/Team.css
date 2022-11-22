@@ -1,0 +1,76 @@
+.teamBannerContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../assets/banners/2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 250px 0px 150px;
+}
+
+.teams {
+    position: relative;
+    margin-top: -100px;
+
+}
+
+.teamCard {
+    margin-bottom: 50px;
+
+}
+
+.inner {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.2);
+    filter: brightness(120%);
+    background-color: red;
+}
+
+
+.teamCardTitleContainer {
+    position: relative;
+    margin-top: -60px;
+    clip-path: polygon(82% 0, 100% 50%, 100% 100%, 0% 100%, 0 48%, 0% 0%);
+    width: 320px;
+    padding-left: 10px;
+    height: 180px;
+}
+
+.teamCardName {
+    font-family: 'Oswald', sans-serif;
+    padding-top: 20px;
+    font-size: 22px;
+}
+
+.teamCardDesignation {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.teamCardStudy {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+@media screen and (max-width: 1080px) {
+    .teamBannerContainer {
+        background-attachment: scroll;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 250px 0px 80px;
+    }
+
+    .teams {
+        margin-top: -50px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    .teamBannerContainer {
+        padding: 100px 0px 80px;
+    }
+}

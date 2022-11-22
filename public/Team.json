@@ -1,0 +1,44 @@
+[
+    {
+        "serial":1,
+        "name":"Ar. Ishtiaque Ahmad, MIAB ",
+        "designation":"Architect, Founder",
+        "study":"B. Arch [BUET], M. Arch [BUET] Member IAB, RAJUK enlisted.",
+        "img":"./assets/team/1.jpg"
+    },
+    {
+        "serial":2,
+        "name":"Engr. Subrata Chowdhury, FIEB ",
+        "designation":"Chief Structural Consultant",
+        "study":"M.Sc., B.Sc. in Civil Engineering [BUET] Fellow IEB, RAJUK Enlisted ",
+       "img":"./assets/team/2.jpg"
+    },
+    {
+        "serial":3,
+        "name":"Sarder Mamun Shahriar  ",
+        "designation":"Architect & Managing Director",
+        "study":"B. Arch [BUET]",
+         "img":"./assets/team/3.jpg"
+    },
+    {
+        "serial":4,
+        "name":"Ar. Zahid Hasan, AMIAB ",
+        "designation":"Architect",
+        "study":"B. Arch [BUET] Associate Member IAB, RAJUK enlisted ",
+        "img":"./assets/team/4.jpg"
+    },
+    {
+        "serial":5,
+        "name":"Ar. Sarowar Zahan ",
+        "designation":"Architect",
+        "study":"B. Arch [DIU]",
+       "img":"./assets/team/5.jpg"
+    },
+    {
+        "serial":6,
+        "name":"Kono Ek Jon ",
+        "designation":"Architect",
+        "study":" ",
+         "img":"./assets/team/6.jpg"
+    }
+]
