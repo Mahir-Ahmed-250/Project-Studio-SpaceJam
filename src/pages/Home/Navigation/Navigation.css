@@ -7,8 +7,56 @@
     border: 1px solid rgb(214, 214, 214);
 }
 
+.homeNavigation {
+    margin-top: 50px;
+    box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
+    padding-top: 50px;
+    box-sizing: border-box;
+    height: 280px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.teamNavigation {
+    margin-top: 50px;
+    box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
+    padding-top: 50px;
+    box-sizing: border-box;
+    height: 280px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.portfolioNavigation {
+    margin-top: 50px;
+    box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
+    padding-top: 50px;
+    box-sizing: border-box;
+    height: 280px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.contactNavigation:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../../assets/banners/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
 .homeNavigation:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../../assets/banners/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.teamNavigation:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../../assets/banners/2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.portfolioNavigation:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../../assets/banners/3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.5s;

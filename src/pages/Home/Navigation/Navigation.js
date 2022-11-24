@@ -63,7 +63,7 @@ const Navigation = () => {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <Link to="/team" style={{ textDecoration: "none" }}>
-                        <div className="homeNavigation" style={{
+                        <div className="teamNavigation" style={{
                             color: darkMode || isHovering2 ? "#fff" : "#161616"
                         }}
                             onMouseEnter={handleMouseEnter2}
@@ -75,7 +75,7 @@ const Navigation = () => {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <Link to="/portfolio" style={{ textDecoration: "none" }}>
-                        <div className="homeNavigation" style={{
+                        <div className="portfolioNavigation" style={{
                             color: darkMode || isHovering3 ? "#fff" : "#161616"
                         }}
                             onMouseEnter={handleMouseEnter3}
