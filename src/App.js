@@ -5,7 +5,6 @@ import { useContext, useLayoutEffect } from 'react';
 import { ThemeContext } from './context';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
-import Footer from './shared/Footer/Footer';
 import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
 
 
@@ -34,7 +33,6 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <Footer />
 
       </div>
     </Wrapper>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../shared/Footer/Footer';
 import HomeNav from '../../../shared/HomeNav/HomeNav';
 import AboutCompany from '../AboutCompany/AboutCompany';
 import HomeBanners from '../HomeBanners/HomeBanners/HomeBanners';
@@ -14,6 +15,7 @@ const Home = () => {
             <AboutCompany />
             <Video />
             <HomePortfolios />
+            <Footer />
         </>
     );
 };

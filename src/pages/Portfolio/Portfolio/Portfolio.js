@@ -49,13 +49,13 @@ const Portfolio = ({ portfolios }) => {
                     <GrFormNext className='btnNext' onClick={nextSlide} />
                     <div className='fullScreenImage'>
                         <img src={portfolios[slideNumber].src} alt='' />
-                        <div className='portfolio-desc' style={{ color: darkMode ? '#fff' : '#ffbb00' }}>
+                        {/* <div className='portfolio-desc' style={{ color: darkMode ? '#fff' : '#ffbb00' }}>
                             <h3>Name: College Park</h3>
                             <h3>Location: Dhaka Uddan, Mohammadpur, Dhaka, Bangladesh</h3>
                             <h3>Size: 1050sqft</h3>
                             <h3>Unit: 4</h3>
                             <h3>Floor: 10</h3>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

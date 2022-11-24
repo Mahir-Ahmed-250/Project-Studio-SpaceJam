@@ -5,6 +5,53 @@
     padding: 250px 0px 150px;
 }
 
+.contact-text-1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+.contact-text-2 {
+    font-family: 'Signika Negative', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contactCard {
+    margin-top: 50px;
+    box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
+    padding-top: 50px;
+    border: 2px solid rgba(131, 131, 131, 0.1);
+    box-sizing: border-box;
+    height: 320px;
+}
+
+
+.contactCardTitle {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.contactCardDesc {
+    font-family: 'Signika Negative', sans-serif;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 0px 20px 0px 20px;
+}
+
+.googleMap {
+    margin-top: 80px;
+    filter: grayscale(1);
+}
+
+.googleMap:hover {
+    filter: grayscale(0);
+    transition: 1s;
+}
+
+
 @media screen and (max-width: 1080px) {
     .contactBannerContainer {
         background-attachment: scroll;

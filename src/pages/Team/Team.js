@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { useState } from 'react';
 import BannerTitle from '../../components/BannerTitle/BannerTitle';
 import { ThemeContext } from '../../context';
+import Footer from '../../shared/Footer/Footer';
 import Nav from '../../shared/Nav/Nav';
 import './Team.css';
 
@@ -43,6 +44,7 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };
