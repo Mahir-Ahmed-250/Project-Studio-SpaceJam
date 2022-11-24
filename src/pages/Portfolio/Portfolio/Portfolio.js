@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { MdCancel } from "@react-icons/all-files/md/MdCancel";
 import { GrFormPrevious } from "@react-icons/all-files/gr/GrFormPrevious";
 import { GrFormNext } from "@react-icons/all-files/gr/GrFormNext";
-import { ThemeContext } from '../../../context';
-import { useContext } from 'react';
+import { useScrollDirection } from 'react-use-scroll-direction'
 
 
 const Portfolio = ({ portfolios }) => {
@@ -37,13 +36,21 @@ const Portfolio = ({ portfolios }) => {
             : setSlideNumber(slideNumber + 1)
     }
 
-    const theme = useContext(ThemeContext)
-    const darkMode = theme.state.darkMode
+
+    const { isScrollingUp } = useScrollDirection()
+    const handleWheel = () => {
+        if (isScrollingUp) {
+            prevSlide()
+        }
+        else {
+            nextSlide()
+        }
+    }
     return (
-        <div>
+        <div >
 
             {openModal &&
-                <div className='sliderWrap'>
+                <div className='sliderWrap' onWheel={handleWheel}>
                     <MdCancel color='black' className='btnClose' onClick={handleCloseModal} />
                     <GrFormPrevious className='btnPrev' onClick={prevSlide} />
                     <GrFormNext className='btnNext' onClick={nextSlide} />

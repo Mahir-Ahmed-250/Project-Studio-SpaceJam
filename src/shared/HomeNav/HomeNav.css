@@ -3,7 +3,7 @@
 }
 
 .topBar {
-    margin-left: 133px;
+    margin-left: 143px;
 }
 
 .homeSideNav {
@@ -14,12 +14,11 @@
 .homeNavLogoContainer-1 {
     position: absolute;
     width: 200px;
-    height: 100px;
+    height: 150px;
     margin-top: 80px;
     padding-bottom: 20px;
     padding-left: 10px;
-    padding-top: 20px;
-    background-color: #272727;
+    padding-top: 50px;
     text-decoration: none;
 }
 
@@ -39,9 +38,6 @@
 .homeNavLogoContainer-2 {
     display: none !important;
 }
-
-
-.homeNavLogoContainer-3 {}
 
 .homeNavName-3 {
     font-family: 'Oswald', sans-serif;

@@ -1,0 +1,30 @@
+.homeNavigation {
+    margin-top: 50px;
+    box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
+    padding-top: 50px;
+    box-sizing: border-box;
+    height: 280px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.homeNavigation:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../../../assets/banners/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.homeNavigationTitle {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 58px;
+}
+
+.homeNavigationText {
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Oswald', sans-serif;
+
+}

@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
-import { Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import Toggle from '../../components/Toggle/Toggle';
 import { ThemeContext } from '../../context';
@@ -44,7 +43,7 @@ const HomeNav = () => {
                     !navBackground ?
                         <>
 
-                            <div className='homeNavLogoContainer-1'>
+                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#161616" : "#fff" }}>
                                 <NavLink to="/" className="homeNavLogoAndName-1">
                                     <img src={logo} height="60" width="60" alt="logo" className='me-2' />
                                     <h2 className="homeNavName-1" style={{
