@@ -4,6 +4,7 @@ import { useState } from 'react';
 import BannerTitle from '../../../components/BannerTitle/BannerTitle';
 import Footer from '../../../shared/Footer/Footer';
 import Nav from '../../../shared/Nav/Nav';
+import Navigation from '../../Home/Navigation/Navigation';
 import Portfolio from '../Portfolio/Portfolio';
 import './Portfolio.css';
 
@@ -31,6 +32,7 @@ const Portfolios = () => {
                     </div>
                 </div>
             </div>
+            <Navigation />
             <Footer />
         </>
 

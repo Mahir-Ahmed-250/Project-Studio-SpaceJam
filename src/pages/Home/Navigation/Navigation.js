@@ -45,7 +45,7 @@ const Navigation = () => {
         setIsHovering4(false);
     };
     return (
-        <div className='container'>
+        <div className='container mb-5'>
             <Title title="WATCH MORE" />
             <div className='row'>
                 <div className="col-lg-3 col-md-6">

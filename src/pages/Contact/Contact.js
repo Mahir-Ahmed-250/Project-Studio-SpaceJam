@@ -8,6 +8,7 @@ import { BsPhone } from 'react-icons/bs';
 import { BsClockHistory } from 'react-icons/bs';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context';
+import Navigation from '../Home/Navigation/Navigation';
 
 const Contact = () => {
     const theme = useContext(ThemeContext)
@@ -65,6 +66,7 @@ const Contact = () => {
                         width="100%" height="550px" frameborder="0" title='google map'></iframe>
                 </div>
             </div>
+            <Navigation />
         </>
     );
 };

@@ -6,6 +6,7 @@ import BannerTitle from '../../components/BannerTitle/BannerTitle';
 import { ThemeContext } from '../../context';
 import Footer from '../../shared/Footer/Footer';
 import Nav from '../../shared/Nav/Nav';
+import Navigation from '../Home/Navigation/Navigation';
 import './Team.css';
 
 const Team = () => {
@@ -44,6 +45,7 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+            <Navigation />
             <Footer />
         </>
     );
