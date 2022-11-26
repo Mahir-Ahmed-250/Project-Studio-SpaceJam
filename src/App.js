@@ -6,6 +6,7 @@ import { ThemeContext } from './context';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
 import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
+import AdminLogin from './adminPanel/pages/AdminLogin/AdminLogin';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path='/portfolio' element={<Portfolios />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<AdminLogin />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
