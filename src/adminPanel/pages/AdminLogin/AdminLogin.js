@@ -36,11 +36,9 @@ const AdminLogin = () => {
         <>
             {
                 loading ? <>
-
                     <div className='loading-gif' >
                         <img src={loadingImg} alt="" />
                     </div>
-
                 </> : <div>
                     <Nav />
                     <div style={{ paddingTop: "100px" }}>
