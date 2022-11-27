@@ -35,7 +35,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #000;
+    background: rgb(117, 117, 117);
     transition: width .3s;
 }
 
