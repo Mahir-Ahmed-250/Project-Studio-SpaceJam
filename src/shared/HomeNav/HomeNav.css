@@ -70,6 +70,19 @@
 
 }
 
+.adminLogo {
+    padding-top: 10px;
+    margin-left: 15px;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-item {
+    font-family: 'Signika Negative', sans-serif;
+}
+
 @media only screen and (max-width: 1080px) {
     .homeNavName-3 {
         font-size: 25px;
@@ -101,5 +114,10 @@
         display: inline-block;
         font-weight: 700;
         font-size: 25px;
+    }
+
+    .adminLogo {
+        padding-top: 10px;
+        margin-left: 0px;
     }
 }

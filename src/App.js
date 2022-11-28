@@ -9,7 +9,12 @@ import Portfolios from './pages/Portfolio/Portfolios/Portfolios';
 import AdminLogin from './adminPanel/pages/AdminLogin/AdminLogin';
 import useFirebase from './adminPanel/hooks/useFirebase';
 import AdminHome from './adminPanel/pages/AdminHome/AdminHome';
-import loadingImg from './assets/logo/logo.png';
+import loadingImg from './assets/logo/logo.png'
+import AdminHomeBanner from './adminPanel/pages/AdminHomeBanner/AdminHomeBanner';
+import AdminServiceCounter from './adminPanel/pages/AdminServiceCounter/AdminServiceCounter';
+import AdminHomePortfolio from './adminPanel/pages/AdminHomePortfolio/AdminHomePortfolio';
+import AdminTeam from './adminPanel/pages/AdminTeam/AdminTeam';
+import AdminPortfolio from './adminPanel/pages/AdminPortfolio/AdminPortfolio';
 
 
 
@@ -26,9 +31,6 @@ function App() {
   const darkMode = theme.state.darkMode
   const { user } = useFirebase()
 
-  // useEffect(() => {
-  //   signOut(auth)
-  // })
   const { loading } = useFirebase()
   if (loading) {
     return (
@@ -51,6 +53,11 @@ function App() {
               <Route path='/portfolio' element={<Portfolios />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/admin' element={<AdminHome />} />
+              <Route path="/admin/homeBanner" element={<AdminHomeBanner />} />
+              <Route path="/admin/counter" element={<AdminServiceCounter />} />
+              <Route path="/admin/homePortfolio" element={<AdminHomePortfolio />} />
+              <Route path="/admin/team" element={<AdminTeam />} />
+              <Route path="/admin/portfolio" element={<AdminPortfolio />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </> : <>
               <Route path="/" element={<Home />} />

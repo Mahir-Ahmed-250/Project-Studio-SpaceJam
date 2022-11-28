@@ -3,7 +3,7 @@ import Nav from '../../../shared/Nav/Nav';
 
 const AdminHome = () => {
     return (
-        <div>
+        <div >
             <Nav />
             <h2>THIS IS ADMIN HOME</h2>
         </div>

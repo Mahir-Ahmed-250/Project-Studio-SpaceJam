@@ -4,9 +4,6 @@ import { useState } from "react";
 import swal from "sweetalert";
 import initializeFirebase from "../firebase/firebase.init";
 
-
-
-
 export const auth = getAuth(initializeFirebase())
 
 const useFirebase = () => {
@@ -26,19 +23,19 @@ const useFirebase = () => {
                 if (userCredential.user) {
                     swal({
                         title: "Well Done",
-                        text: "Successfully logged in by Email!",
+                        text: "Welcome to Studio SpaceJam AdminPanel",
                         icon: "success",
                         button: "OK",
                     });
-
                 }
+
 
             })
             .catch((error) => {
                 swal({
-                    title: "SORRY",
-                    text: "SORRY",
-                    icon: "danger",
+                    title: "Sorry",
+                    text: `${error.message}`,
+                    icon: "error",
                     button: "OK",
                 });
             })
