@@ -1,7 +1,7 @@
 import './App.css';
 import { Navigate, Route, Routes, useLocation, } from 'react-router-dom';
 import Home from './pages/Home/Home/Home';
-import { useContext, useLayoutEffect } from 'react';
+import { useContext, useEffect, useLayoutEffect } from 'react';
 import { ThemeContext } from './context';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
@@ -15,6 +15,7 @@ import AdminServiceCounter from './adminPanel/pages/AdminServiceCounter/AdminSer
 import AdminHomePortfolio from './adminPanel/pages/AdminHomePortfolio/AdminHomePortfolio';
 import AdminTeam from './adminPanel/pages/AdminTeam/AdminTeam';
 import AdminPortfolio from './adminPanel/pages/AdminPortfolio/AdminPortfolio';
+import { useState } from 'react';
 
 
 
@@ -31,6 +32,14 @@ function App() {
   const darkMode = theme.state.darkMode
   const { user } = useFirebase()
 
+  const [counter, setCounter] = useState([])
+  useEffect(() => {
+    fetch(`https://firestore.googleapis.com/v1/projects/studio-space-jam/databases/(default)/documents/serviceCounter`)
+      .then((res) => res.json())
+      .then((data) => setCounter(data));
+  }, [])
+
+
   const { loading } = useFirebase()
   if (loading) {
     return (
@@ -41,6 +50,13 @@ function App() {
       </>
     )
   }
+
+
+
+
+
+
+
   return (
     <Wrapper>
       <div style={{ backgroundColor: darkMode ? "#161616" : "#fff", color: darkMode && "#fff", transition: "0.5s" }}>
@@ -54,7 +70,8 @@ function App() {
               <Route path='/contact' element={<Contact />} />
               <Route path='/admin' element={<AdminHome />} />
               <Route path="/admin/homeBanner" element={<AdminHomeBanner />} />
-              <Route path="/admin/counter" element={<AdminServiceCounter />} />
+              <Route path="/admin/counter" element={<AdminServiceCounter counter={counter
+              } />} />
               <Route path="/admin/homePortfolio" element={<AdminHomePortfolio />} />
               <Route path="/admin/team" element={<AdminTeam />} />
               <Route path="/admin/portfolio" element={<AdminPortfolio />} />
