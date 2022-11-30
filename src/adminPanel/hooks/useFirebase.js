@@ -4,10 +4,11 @@ import { useState } from "react";
 import swal from "sweetalert";
 import initializeFirebase from "../firebase/firebase.init";
 import { getFirestore } from 'firebase/firestore'
-
+import { getStorage } from "firebase/storage";
 
 export const auth = getAuth(initializeFirebase())
 export const db = getFirestore(initializeFirebase())
+export const storage = getStorage(initializeFirebase());
 const useFirebase = () => {
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true)

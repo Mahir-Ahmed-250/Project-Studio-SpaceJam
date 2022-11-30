@@ -63,7 +63,7 @@ const Nav = () => {
 
     return (
         <nav className="navbar navbar-expand-md fixed-top" style={{
-            transition: '.5s ease-in-out', backgroundColor: darkMode ? navBackground ? '#161616' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
+            transition: '.5s ease-in-out', backgroundColor: darkMode ? navBackground ? '#1c2335' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
         }}>
             <div className="container">
                 <div className='logoAndName' >
@@ -123,7 +123,7 @@ const Nav = () => {
                                         >
 
                                             <p style={{ cursor: "pointer" }} className="dropdown-item" >
-                                                <RiNumber2 className='me-1' />Service Counter</p>
+                                                <RiNumber2 className='me-1' />Service & Consultancy </p>
                                         </NavLink>
                                         <NavLink to="/admin/homePortfolio"
                                             style={{ textDecoration: "none" }}

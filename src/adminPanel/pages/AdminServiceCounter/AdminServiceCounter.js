@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import swal from 'sweetalert';
 import Nav from '../../../shared/Nav/Nav';
+import AdminTitle from '../../components/AdminTitle/AdminTitle';
 import { db } from '../../hooks/useFirebase';
 import './AdminServiceCounter.css';
 
@@ -74,15 +75,19 @@ const AdminServiceCounter = ({ counter }) => {
         })
         return counterListenerSubscription;
     }, [])
+
     return (
         <>
             <Nav />
             <div className='container '>
+
                 <div className='adminServiceCounterContainer' >
+
+                    <AdminTitle title="Service & Consultancy Counter" />
                     <div className="form-outline mb-4">
                         <p className='serviceLabel'>Years of Services</p>
                         {
-                            counters.map(counter => <>
+                            counters.map(counter => <div key={counter.id}>
                                 <input type="number" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
                                     onBlur={handleService}
                                     onKeyPress={(event) => {
@@ -94,14 +99,14 @@ const AdminServiceCounter = ({ counter }) => {
                                     defaultValue={counter.service}
                                     placeholder="Years of Services" />
 
-                            </>
+                            </div>
                             )
 
                         }
                     </div>
 
                     {
-                        counters.map(counter => <>
+                        counters.map(counter => <div key={counter.id}>
                             <p className='serviceLabel'>Building Consultancy</p>
 
                             <input type="number" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
@@ -114,10 +119,8 @@ const AdminServiceCounter = ({ counter }) => {
                                 required
                                 defaultValue={counter.building}
                                 placeholder="Building Consultancy" />
-                        </>
-
+                        </div>
                         )
-
                     }
                     <button className='loginBtn' onClick={onClickUpdate}>Update</button>
                 </div>

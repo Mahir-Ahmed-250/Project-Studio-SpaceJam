@@ -1,7 +1,9 @@
+import { collection, onSnapshot, query } from 'firebase/firestore';
 import React from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
+import { db } from '../../adminPanel/hooks/useFirebase';
 import BannerTitle from '../../components/BannerTitle/BannerTitle';
 import { ThemeContext } from '../../context';
 import Footer from '../../shared/Footer/Footer';
@@ -12,11 +14,22 @@ import './Team.css';
 const Team = () => {
     const [teams, setTeams] = useState([]);
 
+
     useEffect(() => {
-        fetch('Team.json')
-            .then(res => res.json())
-            .then(data => setTeams(data))
+        //create the query
+        const q = query(collection(db, 'team'))
+        //create listener
+        const counterListenerSubscription = onSnapshot(q, (querySnapShot) => {
+            const list = []
+            querySnapShot.forEach((doc) => {
+                list.push({ ...doc.data(), id: doc.id })
+            })
+            setTeams(list)
+
+        })
+        return counterListenerSubscription;
     }, [])
+
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
     return (
@@ -35,10 +48,16 @@ const Team = () => {
                                     <div className="inner">
                                         <img className='teamCardImg' src={team.img} alt="" width="100%" />
                                     </div>
-                                    <div className='teamCardTitleContainer' style={{ backgroundColor: darkMode ? "#161616" : "#fff" }}>
+                                    <div className='teamCardTitleContainer' style={{ backgroundColor: darkMode ? "#1f2227" : "#fff" }}>
                                         <h5 className='teamCardName'>{team.name}</h5>
                                         <p className='teamCardDesignation'>{team.designation}</p>
-                                        <p className='teamCardStudy'>{team.study}</p>
+                                        {
+                                            team.study ? <p className='teamCardStudy'>{team.study} <br />
+                                            </p> : <></>
+                                        }
+                                        {
+                                            team.membership ? <span className='teamCardStudy'>{team.membership}</span> : <></>
+                                        }
                                     </div>
                                 </div>)
                         }

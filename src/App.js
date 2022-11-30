@@ -59,7 +59,7 @@ function App() {
 
   return (
     <Wrapper>
-      <div style={{ backgroundColor: darkMode ? "#161616" : "#fff", color: darkMode && "#fff", transition: "0.5s" }}>
+      <div style={{ backgroundColor: darkMode ? "#1f2227" : "#fff", color: darkMode && "#fff", transition: "0.5s" }}>
 
         <Routes >
           {

@@ -4,16 +4,45 @@ import { SwiperSlide } from "swiper/react";
 import SwiperCore from 'swiper';
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import './HomeBanners.css';
+import { db } from '../../../../adminPanel/hooks/useFirebase';
+import { collection, onSnapshot, query } from 'firebase/firestore';
 
 SwiperCore.use([Navigation]);
 
-
 const HomeBanners = () => {
+    // const [banners, setBanners] = useState([]);
+    // useEffect(() => {
+    //     fetch('HomeBanner.json')
+    //         .then(res => res.json())
+    //         .then(data => setBanners(data))
+    // }, [])
+
+    // const [imageUrls, setImageUrls] = useState([]);
+    // const imagesListRef = ref(storage, "homeBanner/");
+    // useEffect(() => {
+    //     listAll(imagesListRef).then((response) => {
+    //         response.items.forEach((item) => {
+    //             getDownloadURL(item).then((url) => {
+    //                 setImageUrls((prev) => [...prev, url]);
+    //             });
+    //         });
+    //     });
+    // }, [imagesListRef]);
+
     const [banners, setBanners] = useState([]);
     useEffect(() => {
-        fetch('HomeBanner.json')
-            .then(res => res.json())
-            .then(data => setBanners(data))
+        //create the query
+        const q = query(collection(db, 'homeBanner'))
+        //create listener
+        const counterListenerSubscription = onSnapshot(q, (querySnapShot) => {
+            const list = []
+            querySnapShot.forEach((doc) => {
+                list.push({ ...doc.data(), id: doc.id })
+            })
+            setBanners(list)
+
+        })
+        return counterListenerSubscription;
     }, [])
 
     return (
@@ -35,8 +64,8 @@ const HomeBanners = () => {
 
                 {
                     banners.map(banner =>
-                        <SwiperSlide key={banner.serial} >
-                            <img src={banner.img1} className="bannerImg" alt="" />
+                        <SwiperSlide key={banner.id}>
+                            <img src={banner.img} className="bannerImg" alt="" />
                         </SwiperSlide>)
                 }
 

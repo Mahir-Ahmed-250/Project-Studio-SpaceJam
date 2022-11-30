@@ -1,17 +1,19 @@
 [
     {
         "serial":1,
-        "name":"Ar. Ishtiaque Ahmad, MIAB ",
+        "name":"Ar. Ishtiaque Ahmad",
         "designation":"Architect, Founder",
-        "study":"B. Arch [BUET], M. Arch [BUET] Member IAB, RAJUK enlisted.",
-        "img":"./assets/team/1.jpg"
+        "study":"B. Arch [BUET], M. Arch [BUET] ",
+        "img":"./assets/team/1.jpg",
+        "membership":"MIAB Member IAB, RAJUK enlisted"
     },
     {
         "serial":2,
         "name":"Engr. Subrata Chowdhury, FIEB ",
         "designation":"Chief Structural Consultant",
-        "study":"M.Sc., B.Sc. in Civil Engineering [BUET] Fellow IEB, RAJUK Enlisted ",
-       "img":"./assets/team/2.jpg"
+        "study":"M.Sc., B.Sc. in Civil Engineering [BUET] ",
+       "img":"./assets/team/2.jpg",
+       "membership":"Fellow IEB, RAJUK Enlisted"
     },
     {
         "serial":3,
@@ -24,8 +26,9 @@
         "serial":4,
         "name":"Ar. Zahid Hasan, AMIAB ",
         "designation":"Architect",
-        "study":"B. Arch [BUET] Associate Member IAB, RAJUK enlisted ",
-        "img":"./assets/team/4.jpg"
+        "study":"B. Arch [BUET] ",
+        "img":"./assets/team/4.jpg",
+        "membership":"Associate Member IAB, RAJUK enlisted "
     },
     {
         "serial":5,

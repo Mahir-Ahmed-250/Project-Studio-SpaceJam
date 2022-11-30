@@ -69,14 +69,14 @@ const HomeNav = () => {
     return (
         <div className='topBar'>
             <nav className="navbar navbar-expand-sm fixed-top" style={{
-                backgroundColor: darkMode ? navBackground ? '#161616' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
+                backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
             }}>
 
                 {
                     !navBackground ?
                         <>
 
-                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#161616" : "#fff" }}>
+                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#1f2227" : "#fff" }}>
                                 <NavLink to="/" className="homeNavLogoAndName-1">
                                     <img src={logo} height="60" width="60" alt="logo" className='me-2' />
                                     <h2 className="homeNavName-1" style={{
