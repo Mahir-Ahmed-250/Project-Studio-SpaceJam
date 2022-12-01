@@ -1,15 +1,12 @@
 import { deleteDoc, doc, updateDoc } from 'firebase/firestore';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import swal from 'sweetalert';
-import { ThemeContext } from '../../../context';
 import { db } from '../../hooks/useFirebase';
 
 function MyVerticallyCenteredModal(props) {
-    const theme = useContext(ThemeContext)
-    const darkMode = theme.state.darkMode
     const [serial, setSerial] = useState(props.team.serial)
-    const [name, setName] = useState(props.team.serial);
+    const [name, setName] = useState(props.team.name);
     const [designation, setDesignation] = useState(props.team.designation);
     const [study, setStudy] = useState(props.team.study);
     const [membership, setMembership] = useState(props.team.membership);
@@ -70,9 +67,9 @@ function MyVerticallyCenteredModal(props) {
                     designation: designation,
                     study: study,
                     membership: membership,
-                    img: baseImage,
-
+                    img: baseImage
                 })
+
                 setSerial(serial);
                 setName(name);
                 setDesignation(designation);
@@ -119,9 +116,7 @@ function MyVerticallyCenteredModal(props) {
             {...props}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
-            centered
-
-        >
+            centered>
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
                     {props.team.name}
@@ -141,7 +136,6 @@ function MyVerticallyCenteredModal(props) {
 
                     <input type="text" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
                         onChange={handleName}
-
                         defaultValue={props.team.name}
                         placeholder="Name" />
 
