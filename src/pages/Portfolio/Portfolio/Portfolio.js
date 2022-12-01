@@ -55,7 +55,7 @@ const Portfolio = ({ portfolios }) => {
                     <GrFormPrevious className='btnPrev' onClick={prevSlide} />
                     <GrFormNext className='btnNext' onClick={nextSlide} />
                     <div className='fullScreenImage'>
-                        <img src={portfolios[slideNumber].src} alt='' />
+                        <img src={portfolios[slideNumber].img} alt='' />
                         {/* <div className='portfolio-desc' style={{ color: darkMode ? '#fff' : '#ffbb00' }}>
                             <h3>Name: College Park</h3>
                             <h3>Location: Dhaka Uddan, Mohammadpur, Dhaka, Bangladesh</h3>
@@ -70,7 +70,7 @@ const Portfolio = ({ portfolios }) => {
 
             <div className='gallery row' >
                 {
-                    portfolios && portfolios.map((slide, index) => {
+                    portfolios && portfolios.sort((a, b) => a.serial - b.serial).map((slide, index) => {
                         return (
                             <div
                                 className='col-lg-4 col-md-6'
@@ -78,7 +78,7 @@ const Portfolio = ({ portfolios }) => {
                                 onClick={() => handleOpenModal(index)}
                             >
                                 <figure class="gallery__link">
-                                    <img src={slide.src} alt='' width="100%" className=' gallery__image' />
+                                    <img src={slide.img} alt='' width="100%" className=' gallery__image' />
                                 </figure>
                             </div>
                         )

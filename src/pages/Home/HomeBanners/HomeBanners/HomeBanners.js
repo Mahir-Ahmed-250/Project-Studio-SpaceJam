@@ -6,6 +6,7 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import './HomeBanners.css';
 import { db } from '../../../../adminPanel/hooks/useFirebase';
 import { collection, onSnapshot, query } from 'firebase/firestore';
+import loadingImg from '../../../../assets/loading/1.gif';
 
 SwiperCore.use([Navigation]);
 
@@ -28,48 +29,61 @@ const HomeBanners = () => {
     //         });
     //     });
     // }, [imagesListRef]);
-
     const [banners, setBanners] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
+        setLoading(true)
         //create the query
         const q = query(collection(db, 'homeBanner'))
         //create listener
-        const counterListenerSubscription = onSnapshot(q, (querySnapShot) => {
+        const bannerListenerSubscription = onSnapshot(q, (querySnapShot) => {
             const list = []
             querySnapShot.forEach((doc) => {
                 list.push({ ...doc.data(), id: doc.id })
             })
             setBanners(list)
-
+            setLoading(false)
         })
-        return counterListenerSubscription;
+        return bannerListenerSubscription;
     }, [])
 
     return (
         <div>
-            <Swiper
-                slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
-                effect={"fade"}
-                navigation={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[EffectFade, Navigation, Pagination, Autoplay]}
-                className="mySwiper"
-            >
+            {
+                loading ? <>
 
-                {
-                    banners.map(banner =>
-                        <SwiperSlide key={banner.id}>
-                            <img src={banner.img} className="bannerImg" alt="" />
-                        </SwiperSlide>)
-                }
+                    <img style={{ width: "100%", height: "100vh" }} src={loadingImg} alt="" />
 
-            </Swiper>
+
+                </> : <>
+
+
+                    <Swiper
+                        slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
+                        effect={"fade"}
+                        navigation={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[EffectFade, Navigation, Pagination, Autoplay]}
+                        className="mySwiper"
+                    >
+
+                        {
+                            banners.map(banner =>
+                                <SwiperSlide key={banner.id}>
+                                    <img src={banner.img} className="bannerImg" alt="" />
+                                </SwiperSlide>)
+                        }
+
+                    </Swiper>
+                </>
+            }
 
         </div>
     );

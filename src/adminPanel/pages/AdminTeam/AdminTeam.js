@@ -8,6 +8,7 @@ import { db } from '../../hooks/useFirebase';
 import './AdminTeam.css';
 import SingleTeam from './SingleTeam';
 import loadingImg from '../../../assets/logo/logo.png'
+import LoadingSkeleton from '../../components/LoadingSkeletonTeam/LoadingSkeletonTeam';
 
 const AdminTeam = () => {
     const theme = useContext(ThemeContext)
@@ -19,6 +20,7 @@ const AdminTeam = () => {
     const [membership, setMembership] = useState('');
     const [baseImage, setBaseImage] = useState('');
     const [loading, setLoading] = useState(false);
+    const [loading2, setLoading2] = useState(false);
 
     const handleSerial = (e) => {
         const result = e.target.value;
@@ -89,7 +91,7 @@ const AdminTeam = () => {
                     buttons: {
                         cancel: "Cancel",
                         catch: {
-                            text: "Go to Home",
+                            text: "Go to Team",
                             value: "catch",
                         },
                     },
@@ -98,7 +100,7 @@ const AdminTeam = () => {
                         switch (value) {
                             case "catch":
 
-                                window.location.href = '/'
+                                window.location.href = '/team'
 
                                 break;
                             default: ;
@@ -124,6 +126,7 @@ const AdminTeam = () => {
 
     const [teams, setTeams] = useState([]);
     useEffect(() => {
+        setLoading2(true)
         //create the query
         const q = query(collection(db, 'team'))
         //create listener
@@ -133,10 +136,11 @@ const AdminTeam = () => {
                 list.push({ ...doc.data(), id: doc.id })
             })
             setTeams(list)
-
+            setLoading2(false)
         })
         return teamListenerSubscription;
     }, [])
+
     if (loading) {
         return (
             <>
@@ -152,11 +156,20 @@ const AdminTeam = () => {
             <Nav />
 
             <div style={{ paddingTop: "10%" }} className="container">
-                <AdminTitle title="Current Team members" />
+                {
+                    teams.length < 0 ? <>
+                    </> : <AdminTitle title="Current Team Members" />
+                }
                 <div className='row'>
                     {
-                        teams.sort((a, b) => a.serial - b.serial).map(team => <SingleTeam key={team.id} team={team} />)
+                        loading2 ? <>
+                            <LoadingSkeleton />
+                        </> : <>
+                            {
+                                teams.sort((a, b) => a.serial - b.serial).map(team => <SingleTeam key={team.id} team={team} />)
 
+                            }
+                        </>
                     }
                 </div>
                 <div className='pb-5' style={{ marginTop: "80px" }}>
@@ -184,7 +197,7 @@ const AdminTeam = () => {
                             onChange={handleStudy}
                             placeholder="Study" />
 
-                        <input type="text" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
+                        <input type="text" id="form3Example3" className="form-control form-control-lg mb-4 w-100"
                             onChange={handleMembership}
                             placeholder="Membership" />
 

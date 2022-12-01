@@ -18,10 +18,22 @@
     background-position: right bottom;
     transition: all .3s ease-out;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .editBtn:hover {
     background-position: left bottom;
     color: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+    .editBtn {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .editBtn {
+        margin-left: 10px;
+    }
 }

@@ -8,12 +8,14 @@ import AdminTitle from '../../components/AdminTitle/AdminTitle';
 import { db } from '../../hooks/useFirebase';
 import './AdminHomeBanner.css';
 import loadingImg from '../../../assets/logo/logo.png'
+import LoadingSkeletonBanner from '../../components/LoadingSkeletonBanner/LoadingSkeletonBanner';
 
 const AdminHomeBanner = () => {
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
     const [baseImage, setBaseImage] = useState("");
     const [loading, setLoading] = useState(false);
+    const [loading2, setLoading2] = useState(false);
 
     const uploadImage = async (e) => {
         const file = e.target.files[0];
@@ -85,6 +87,7 @@ const AdminHomeBanner = () => {
 
     const [banners, setBanners] = useState([]);
     useEffect(() => {
+        setLoading2(true)
         //create the query
         const q = query(collection(db, 'homeBanner'))
         //create listener
@@ -94,7 +97,7 @@ const AdminHomeBanner = () => {
                 list.push({ ...doc.data(), id: doc.id })
             })
             setBanners(list)
-
+            setLoading2(false)
         })
         return bannerListenerSubscription;
     }, [])
@@ -147,14 +150,18 @@ const AdminHomeBanner = () => {
                 {
                     banners.length > 0 ? <AdminTitle title="Current Home Banners" /> : <></>
                 }
-                <div className='row'>
-                    {
-                        banners.map(banner => <div key={banner.id} className="col-lg-4 col-md-6">
-                            <img src={banner.img} alt="" width="100%" height="250px" className='' />
-                            <button className='delBtn' onClick={() => onPressDeleteMsg(banner.id)}>Delete</button>
-                        </div>)
-                    }
-                </div>
+                {
+                    loading2 ? <>
+                        <LoadingSkeletonBanner />
+                    </> : <div className='row'>
+                        {
+                            banners.map(banner => <div key={banner.id} className="col-lg-4 col-md-6 mb-4">
+                                <img src={banner.img} alt="" width="100%" height="250px" className='' />
+                                <button className='delBtn' onClick={() => onPressDeleteMsg(banner.id)}>Delete</button>
+                            </div>)
+                        }
+                    </div>
+                }
                 <div className='pb-5' style={{ marginTop: "80px" }}>
                     <AdminTitle title="Upload a new Home Banner" />
                     <div className='imgAndDrop'>

@@ -1,6 +1,9 @@
+import { collection, onSnapshot, query } from 'firebase/firestore';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import LoadingSkeletonBanner from '../../../adminPanel/components/LoadingSkeletonBanner/LoadingSkeletonBanner';
+import { db } from '../../../adminPanel/hooks/useFirebase';
 import BannerTitle from '../../../components/BannerTitle/BannerTitle';
 import Footer from '../../../shared/Footer/Footer';
 import Nav from '../../../shared/Nav/Nav';
@@ -10,13 +13,25 @@ import './Portfolio.css';
 
 
 const Portfolios = () => {
-    const [portfolios, setPortfolios] = useState([]);
+    const [portfolios, setBanners] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch('Portfolio.json')
-            .then(res => res.json())
-            .then(data => setPortfolios(data))
+        setLoading(true)
+        //create the query
+        const q = query(collection(db, 'portfolio'))
+        //create listener
+        const portfolioListenerSubscription = onSnapshot(q, (querySnapShot) => {
+            const list = []
+            querySnapShot.forEach((doc) => {
+                list.push({ ...doc.data(), id: doc.id })
+            })
+            setBanners(list)
+            setLoading(false)
+        })
+        return portfolioListenerSubscription;
     }, [])
+
 
 
     return (
@@ -27,9 +42,13 @@ const Portfolios = () => {
                     <BannerTitle title="PORTFOLIO" />
                 </div>
                 <div className='portfolios container'>
-                    <div className="">
-                        <Portfolio portfolios={portfolios} />
-                    </div>
+                    {
+                        loading ? <LoadingSkeletonBanner /> : <>
+                            <div className="">
+                                <Portfolio portfolios={portfolios} />
+                            </div>
+                        </>
+                    }
                 </div>
             </div>
             <Navigation />

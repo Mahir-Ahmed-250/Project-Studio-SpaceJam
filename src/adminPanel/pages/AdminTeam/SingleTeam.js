@@ -124,7 +124,7 @@ function MyVerticallyCenteredModal(props) {
             </Modal.Header>
             <Modal.Body>
                 <div>
-                    <input type="number" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
+                    <input type="number" className="form-control form-control-lg mb-2 w-100"
                         onChange={handleSerial}
                         onKeyPress={(event) => {
                             if (!/[0-9]/.test(event.key)) {
@@ -134,22 +134,22 @@ function MyVerticallyCenteredModal(props) {
                         defaultValue={props.team.serial}
                         placeholder="Serial" />
 
-                    <input type="text" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
+                    <input type="text" className="form-control form-control-lg mb-2 w-100"
                         onChange={handleName}
                         defaultValue={props.team.name}
                         placeholder="Name" />
 
-                    <input type="text" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
+                    <input type="text" className="form-control form-control-lg mb-2 w-100"
                         onChange={handleDesignation}
                         defaultValue={props.team.designation}
                         placeholder="Designation" />
 
-                    <input type="text" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
+                    <input type="text" className="form-control form-control-lg mb-2 w-100"
                         onChange={handleStudy}
                         defaultValue={props.team.study}
                         placeholder="Study" />
 
-                    <input type="text" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
+                    <input type="text" className="form-control form-control-lg mb-2 w-100"
                         onChange={handleMembership}
                         defaultValue={props.team.membership}
                         placeholder="Membership" />
@@ -215,7 +215,7 @@ const SingleTeam = ({ team }) => {
             <div className='serialDiv'>
                 <span className='ps-2'>{team.serial}</span>
             </div>
-            <img src={team.img} alt="" width="100%" height="300px" className='' />
+            <img src={team.img} alt="" width="100%" height="300px" style={{ border: "5px solid black" }} />
 
             <button className='delBtn' onClick={() => onPressDeleteMsg(team.id)}>Delete</button>
             <button className='editBtn' onClick={() => setModalShow(true)}>Edit</button>

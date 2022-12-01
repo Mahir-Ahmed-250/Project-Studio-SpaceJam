@@ -115,7 +115,66 @@ const HomeNav = () => {
 
 
                                     <Toggle />
+                                    {
+                                        user ?
+                                            <div className="adminLogo">
+                                                <div className="nav-item dropdown profileIcon">
 
+                                                    <p className="nav-link  dropdown-toggle" style={{ color: "white" }}
+                                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" >
+
+                                                        <img src={logo} width="60" height="60" className="rounded-circle border me-2" alt="" />
+
+                                                    </p>
+
+                                                    <ul className="dropdown-menu profileDropdown"
+                                                        onClick={stop}
+                                                        aria-labelledby="navbarDropdownMenuLink">
+                                                        <NavLink to="/admin/homeBanner"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber1 className='me-1' />Home Banner</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/counter"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber2 className='me-1' />Service Counter</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/homePortfolio"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber3 className='me-1' />Home Portfolio</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/team"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber4 className='me-1' />Team</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/portfolio"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber5 className='me-1' />Portfolio</p>
+                                                        </NavLink>
+                                                        <p style={{ cursor: "pointer" }} className="dropdown-item" onClick={handleLogout}>
+                                                            <FiLogOut className='me-1' />Log Out</p>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            : <>
+                                            </>
+                                    }
                                 </div>
 
                             </div>
@@ -260,7 +319,66 @@ const HomeNav = () => {
                                         <NavLink to="/contact" className="navigation" style={{ textDecoration: "none", color: navBackground && darkMode ? '#fff' : '#ffbb00' }}> Contact</NavLink>
                                     </h5>
                                     <Toggle />
+                                    {
+                                        user ?
+                                            <div className="adminLogo">
+                                                <div className="nav-item dropdown profileIcon">
 
+                                                    <p className="nav-link  dropdown-toggle" style={{ color: "white" }}
+                                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" >
+
+                                                        <img src={logo} width="60" height="60" className="rounded-circle border me-2" alt="" />
+
+                                                    </p>
+
+                                                    <ul className="dropdown-menu profileDropdown"
+                                                        onClick={stop}
+                                                        aria-labelledby="navbarDropdownMenuLink">
+                                                        <NavLink to="/admin/homeBanner"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber1 className='me-1' />Home Banner</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/counter"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber2 className='me-1' />Service Counter</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/homePortfolio"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber3 className='me-1' />Home Portfolio</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/team"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber4 className='me-1' />Team</p>
+                                                        </NavLink>
+                                                        <NavLink to="/admin/portfolio"
+                                                            style={{ textDecoration: "none" }}
+                                                        >
+
+                                                            <p style={{ cursor: "pointer" }} className="dropdown-item" >
+                                                                <RiNumber5 className='me-1' />Portfolio</p>
+                                                        </NavLink>
+                                                        <p style={{ cursor: "pointer" }} className="dropdown-item" onClick={handleLogout}>
+                                                            <FiLogOut className='me-1' />Log Out</p>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            : <>
+                                            </>
+                                    }
                                 </div>
                             </div>
                         </>

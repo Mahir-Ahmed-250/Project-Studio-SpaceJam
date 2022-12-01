@@ -3,8 +3,11 @@
     width: 100%;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {}
+.loadingBanner {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+}
 
 @media screen and (max-width: 1080px) {
     .bannerImg {
