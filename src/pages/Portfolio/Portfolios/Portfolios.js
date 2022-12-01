@@ -5,9 +5,9 @@ import { useState } from 'react';
 import LoadingSkeletonBanner from '../../../adminPanel/components/LoadingSkeletonBanner/LoadingSkeletonBanner';
 import { db } from '../../../adminPanel/hooks/useFirebase';
 import BannerTitle from '../../../components/BannerTitle/BannerTitle';
+import Navigation from '../../../components/Navigation/Navigation';
 import Footer from '../../../shared/Footer/Footer';
 import Nav from '../../../shared/Nav/Nav';
-import Navigation from '../../Home/Navigation/Navigation';
 import Portfolio from '../Portfolio/Portfolio';
 import './Portfolio.css';
 

@@ -2,8 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Title from '../../../components/Title/Title';
-import { ThemeContext } from '../../../context';
+
+import { ThemeContext } from '../../context';
+import Title from '../Title/Title';
+
 import './Navigation.css';
 
 const Navigation = () => {

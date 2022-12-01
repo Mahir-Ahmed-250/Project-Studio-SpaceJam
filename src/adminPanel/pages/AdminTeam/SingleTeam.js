@@ -81,7 +81,7 @@ function MyVerticallyCenteredModal(props) {
                     buttons: {
                         cancel: "Cancel",
                         catch: {
-                            text: "Go to Home",
+                            text: "Go to Team",
                             value: "catch",
                         },
                     },
@@ -89,7 +89,7 @@ function MyVerticallyCenteredModal(props) {
                     .then((value) => {
                         switch (value) {
                             case "catch":
-                                window.location.href = '/'
+                                window.location.href = '/team'
                                 break;
                             default: ;
                         }
@@ -210,6 +210,8 @@ const SingleTeam = ({ team }) => {
                 }
             });
     }
+
+
     return (
         <div key={team.id} className="col-lg-3 col-md-4 mt-5">
             <div className='serialDiv'>

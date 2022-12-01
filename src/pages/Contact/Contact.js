@@ -8,7 +8,8 @@ import { BsPhone } from 'react-icons/bs';
 import { BsClockHistory } from 'react-icons/bs';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context';
-import Navigation from '../Home/Navigation/Navigation';
+import Navigation from '../../components/Navigation/Navigation';
+
 
 const Contact = () => {
     const theme = useContext(ThemeContext)

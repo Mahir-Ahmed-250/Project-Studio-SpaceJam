@@ -9,8 +9,9 @@ import { ThemeContext } from '../../context';
 import Footer from '../../shared/Footer/Footer';
 import LoadingSkeletonBanner from '../../adminPanel/components/LoadingSkeletonBanner/LoadingSkeletonBanner';
 import Nav from '../../shared/Nav/Nav';
-import Navigation from '../Home/Navigation/Navigation';
+
 import './Team.css';
+import Navigation from '../../components/Navigation/Navigation';
 
 const Team = () => {
     const theme = useContext(ThemeContext)

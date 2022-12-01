@@ -14,7 +14,7 @@ import loadingImg from '../../../assets/logo/logo.png';
 const AdminPortfolio = () => {
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
-    const [portfolios, setBanners] = useState([]);
+    const [portfolios, setPortfolios] = useState([]);
     const [baseImage, setBaseImage] = useState('');
     const [serial, setSerial] = useState('')
     const [loading, setLoading] = useState(false);
@@ -104,7 +104,7 @@ const AdminPortfolio = () => {
             querySnapShot.forEach((doc) => {
                 list.push({ ...doc.data(), id: doc.id })
             })
-            setBanners(list)
+            setPortfolios(list)
             setLoading2(false)
         })
         return portfolioListenerSubscription;
@@ -181,7 +181,7 @@ const AdminPortfolio = () => {
                 <div className='pb-5' style={{ marginTop: "80px" }}>
                     <AdminTitle title="Upload a new Portfolio" />
                     <div>
-                        <input type="number" id="form3Example3" className="form-control form-control-lg mb-4 w-100"
+                        <input type="number" id="form3Example3" className="form-control form-control-lg mb-4 w-25"
                             onChange={handleSerial}
 
                             onKeyPress={(event) => {

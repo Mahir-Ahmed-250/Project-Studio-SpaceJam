@@ -123,7 +123,7 @@ const Nav = () => {
                                         >
 
                                             <p style={{ cursor: "pointer" }} className="dropdown-item" >
-                                                <RiNumber2 className='me-1' />Service & Consultancy </p>
+                                                <RiNumber2 className='me-1' />Service Counter </p>
                                         </NavLink>
                                         <NavLink to="/admin/homePortfolio"
                                             style={{ textDecoration: "none" }}

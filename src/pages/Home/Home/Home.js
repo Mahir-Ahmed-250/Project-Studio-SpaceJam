@@ -1,9 +1,10 @@
 import React from 'react';
+import Navigation from '../../../components/Navigation/Navigation';
 import Footer from '../../../shared/Footer/Footer';
 import HomeNav from '../../../shared/HomeNav/HomeNav';
 import AboutCompany from '../AboutCompany/AboutCompany';
 import HomePortfolios from '../HomePortfolios/HomePortfolios/HomePortfolios';
-import Navigation from '../Navigation/Navigation';
+
 import ServiceAndCompanyCounter from '../ServiceAndCompanyCounter/ServiceAndCompanyCounter';
 import Video from '../Video/Video';
 

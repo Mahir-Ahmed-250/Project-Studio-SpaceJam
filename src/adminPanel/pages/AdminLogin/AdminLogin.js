@@ -7,6 +7,7 @@ import BannerTitle from '../../../components/BannerTitle/BannerTitle';
 import Footer from '../../../shared/Footer/Footer';
 import useFirebase from '../../hooks/useFirebase';
 import loadingImg from '../../../assets/logo/logo.png';
+import AdminTitle from '../../components/AdminTitle/AdminTitle';
 
 const AdminLogin = () => {
     const { loginUser, loading } = useFirebase();

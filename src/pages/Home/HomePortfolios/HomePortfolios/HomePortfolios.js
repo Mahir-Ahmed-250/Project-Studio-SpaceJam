@@ -11,16 +11,30 @@ import { useEffect } from 'react';
 import { Autoplay } from 'swiper';
 import Title from '../../../../components/Title/Title';
 import { Link } from 'react-router-dom';
+import { collection, onSnapshot, query } from 'firebase/firestore';
+import { db } from '../../../../adminPanel/hooks/useFirebase';
 SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
 
 const HomePortfolios = () => {
-
     const [portfolios, setBanners] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
-        fetch('HomePortfolio.json')
-            .then(res => res.json())
-            .then(data => setBanners(data))
+        setLoading(true)
+        //create the query
+        const q = query(collection(db, 'homePortfolio'))
+        //create listener
+        const portfolioListenerSubscription = onSnapshot(q, (querySnapShot) => {
+            const list = []
+            querySnapShot.forEach((doc) => {
+                list.push({ ...doc.data(), id: doc.id })
+            })
+            setBanners(list)
+            setLoading(false)
+        })
+        return portfolioListenerSubscription;
     }, [])
+
     return (
         <div className='container homePortfolioContainer'>
             <Title title="PORTFOLIO" />
@@ -28,7 +42,6 @@ const HomePortfolios = () => {
 
                 slidesPerView={1}
                 spaceBetween={30}
-
 
                 loop={true}
                 loopFillGroupWithBlank={true}
@@ -67,7 +80,7 @@ const HomePortfolios = () => {
                 style={{ height: "400px", marginTop: "50px" }}
             >
                 {
-                    portfolios.map(portfolio =>
+                    portfolios.sort((a, b) => a.serial - b.serial).map(portfolio =>
 
                         <SwiperSlide key={portfolio.serial} >
 

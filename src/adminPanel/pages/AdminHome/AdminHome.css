@@ -1,0 +1,11 @@
+.adminHomeContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 1080px) {
+    .adminHomeContainer {
+        flex-direction: column;
+    }
+}
