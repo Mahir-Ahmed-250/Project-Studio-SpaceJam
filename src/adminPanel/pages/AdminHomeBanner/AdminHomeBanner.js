@@ -7,13 +7,14 @@ import Nav from '../../../shared/Nav/Nav';
 import AdminTitle from '../../components/AdminTitle/AdminTitle';
 import { db } from '../../hooks/useFirebase';
 import './AdminHomeBanner.css';
-
+import loadingImg from '../../../assets/logo/logo.png'
 
 const AdminHomeBanner = () => {
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
-
     const [baseImage, setBaseImage] = useState("");
+    const [loading, setLoading] = useState(false);
+
     const uploadImage = async (e) => {
         const file = e.target.files[0];
         const base64 = await convertBase64(file);
@@ -37,7 +38,7 @@ const AdminHomeBanner = () => {
 
     const onClickCreate = async () => {
 
-
+        setLoading(true)
         try {
             if (baseImage) {
                 await addDoc(collection(db, 'homeBanner'), {
@@ -79,6 +80,7 @@ const AdminHomeBanner = () => {
         catch (error) {
             console.log('error--->', error)
         }
+        setLoading(false)
     }
 
     const [banners, setBanners] = useState([]);
@@ -86,7 +88,7 @@ const AdminHomeBanner = () => {
         //create the query
         const q = query(collection(db, 'homeBanner'))
         //create listener
-        const counterListenerSubscription = onSnapshot(q, (querySnapShot) => {
+        const bannerListenerSubscription = onSnapshot(q, (querySnapShot) => {
             const list = []
             querySnapShot.forEach((doc) => {
                 list.push({ ...doc.data(), id: doc.id })
@@ -94,14 +96,14 @@ const AdminHomeBanner = () => {
             setBanners(list)
 
         })
-        return counterListenerSubscription;
+        return bannerListenerSubscription;
     }, [])
 
 
     const onPressDelete = async (id) => {
         try {
             deleteDoc(doc(db, "homeBanner", id))
-            swal("Good job!", "You clicked the button!", "success");
+
         }
         catch (err) {
             console.log('err--->', err)
@@ -121,14 +123,22 @@ const AdminHomeBanner = () => {
                 switch (value) {
                     case "catch":
                         onPressDelete(id)
-                        swal("Success!", "You have successfully Delete the Banner!", "success");
+                        swal("Success!", "You have successfully Deleted the Banner!", "success");
                         break;
                     default: ;
                 }
             });
     }
 
-
+    if (loading) {
+        return (
+            <>
+                <div className='loading-gif'>
+                    <img src={loadingImg} alt="" />
+                </div>
+            </>
+        )
+    }
     return (
         <>
             <Nav />
@@ -145,7 +155,7 @@ const AdminHomeBanner = () => {
                         </div>)
                     }
                 </div>
-                <div className='pb-5' >
+                <div className='pb-5' style={{ marginTop: "80px" }}>
                     <AdminTitle title="Upload a new Home Banner" />
                     <div className='imgAndDrop'>
                         <div class="file-drop-area" style={{ border: darkMode ? "1px dashed #fff" : "1px dashed #161616" }}>

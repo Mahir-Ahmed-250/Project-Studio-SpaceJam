@@ -89,7 +89,7 @@ const AdminServiceCounter = ({ counter }) => {
                         {
                             counters.map(counter => <div key={counter.id}>
                                 <input type="number" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
-                                    onBlur={handleService}
+                                    onChange={handleService}
                                     onKeyPress={(event) => {
                                         if (!/[0-9]/.test(event.key)) {
                                             event.preventDefault();
@@ -110,7 +110,7 @@ const AdminServiceCounter = ({ counter }) => {
                             <p className='serviceLabel'>Building Consultancy</p>
 
                             <input type="number" id="form3Example3" className="form-control form-control-lg mb-2 w-100"
-                                onBlur={handleBuilding}
+                                onChange={handleBuilding}
                                 onKeyPress={(event) => {
                                     if (!/[0-9]/.test(event.key)) {
                                         event.preventDefault();

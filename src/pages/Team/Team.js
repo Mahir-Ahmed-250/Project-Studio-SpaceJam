@@ -12,9 +12,10 @@ import Navigation from '../Home/Navigation/Navigation';
 import './Team.css';
 
 const Team = () => {
+    const theme = useContext(ThemeContext)
+    const darkMode = theme.state.darkMode
+
     const [teams, setTeams] = useState([]);
-
-
     useEffect(() => {
         //create the query
         const q = query(collection(db, 'team'))
@@ -30,8 +31,6 @@ const Team = () => {
         return counterListenerSubscription;
     }, [])
 
-    const theme = useContext(ThemeContext)
-    const darkMode = theme.state.darkMode
     return (
         <>
             <Nav />
@@ -43,7 +42,7 @@ const Team = () => {
                     <div className="row">
 
                         {
-                            teams.map(team =>
+                            teams.sort((a, b) => a.serial - b.serial).map(team =>
                                 <div key={team.serial} className='col-lg-4 col-md-6 teamCard'>
                                     <div className="inner">
                                         <img className='teamCardImg' src={team.img} alt="" width="100%" />

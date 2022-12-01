@@ -52,11 +52,6 @@ function App() {
   }
 
 
-
-
-
-
-
   return (
     <Wrapper>
       <div style={{ backgroundColor: darkMode ? "#1f2227" : "#fff", color: darkMode && "#fff", transition: "0.5s" }}>

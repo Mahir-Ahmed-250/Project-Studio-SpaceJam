@@ -48,7 +48,7 @@
 .delBtn {
     border: none;
     height: 46px;
-    width: 154px;
+    width: 124px;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     letter-spacing: 3px;
@@ -57,7 +57,6 @@
     background-position: right bottom;
     transition: all .3s ease-out;
     margin-top: 20px;
-    margin-bottom: 80px;
 }
 
 .delBtn:hover {

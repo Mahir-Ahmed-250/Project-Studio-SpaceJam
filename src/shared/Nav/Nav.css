@@ -43,6 +43,10 @@
     width: 100%;
 }
 
+.dropdown-menu {
+    margin-left: -100px !important;
+}
+
 @media screen and (max-width:1080px) {
     .navCompanyName {
         font-size: 25px;
@@ -72,5 +76,9 @@
 
     .navLink:hover::after {
         width: 20%;
+    }
+
+    .dropdown-menu {
+        margin-left: -0px !important;
     }
 }
