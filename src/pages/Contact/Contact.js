@@ -17,7 +17,7 @@ const Contact = () => {
     return (
         <>
             <Nav />
-            <div className="portfolioContainer">
+            <div className="portfolioContainer ">
                 <div className="contactBannerContainer">
                     <BannerTitle title="CONTACT US" />
                 </div>
@@ -67,7 +67,15 @@ const Contact = () => {
                         width="100%" height="550px" frameborder="0" title='google map'></iframe>
                 </div>
             </div>
+
             <Navigation />
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
         </>
     );
 };

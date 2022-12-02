@@ -110,7 +110,7 @@ const AdminHome = () => {
                                     }}
                                         onMouseEnter={handleMouseEnter4}
                                         onMouseLeave={handleMouseLeave4}>
-                                        <h2 className="homeNavigationTitle">Service Counter</h2>
+                                        <h2 className="homeNavigationTitle"> Counter</h2>
                                         <h5 className="homeNavigationText">Update Service & Consultancy Here</h5>
                                     </div>
                                 </Link>
