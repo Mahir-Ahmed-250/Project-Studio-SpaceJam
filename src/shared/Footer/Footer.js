@@ -3,27 +3,7 @@ import './Footer.css';
 import logo from '../../assets/logo/logo.jpg'
 import { ThemeContext } from '../../context';
 import { ImLocation } from 'react-icons/im';
-import { Button, Modal } from 'react-bootstrap';
-
-
-function MyVerticallyCenteredModal(props) {
-    return (
-        <Modal {...props}>
-            <Modal.Header closeButton>
-                <Modal.Title>Modal</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Modal body content</Modal.Body>
-        </Modal>
-    );
-}
-
-
-
-
-
-
-
-
+import { Modal } from 'react-bootstrap';
 
 const Footer = () => {
     const theme = useContext(ThemeContext)
@@ -69,7 +49,8 @@ const Footer = () => {
                     <div className="col-md-4 footerItem3">
 
                         <h3 className='footerItemTitle'>Our Location</h3>
-
+                        <a className='footerAddress' href="https://www.google.com/maps/place/Studio+Space+Jam/@23.7442635,90.3686266,17z/data=!3m1!4b1!4m5!3m4!1s0x3755bf5474458835:0x62abf0a66ea3696!8m2!3d23.7442586!4d90.3708153" rel="noreferrer" target="_blank" style={{ textDecoration: "none", color: darkMode ? " #fff" : "#fff" }}>House:55/D, Road:9/A, Dhanmondi, Dhaka, 1209</a>
+                        <p ></p>
                         {values.map((v, idx) => (
                             <span className='polygon' >
                                 <ImLocation size={80} key={idx} onClick={() => handleShow(v)} />
