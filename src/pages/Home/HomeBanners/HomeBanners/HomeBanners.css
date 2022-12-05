@@ -9,6 +9,26 @@
     background-color: rgb(255, 0, 0);
 }
 
+.bannerBtnPrev {
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 50px;
+    z-index: 11;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bannerBtnNext {
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 120px;
+    z-index: 11;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .swiper-button-next {}
 
 .swiper-button-prev {}

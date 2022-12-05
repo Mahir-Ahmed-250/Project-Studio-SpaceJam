@@ -51,6 +51,9 @@
     transition: 1s;
 }
 
+.contactFooter {
+    height: 110px;
+}
 
 @media screen and (max-width: 1080px) {
     .contactBannerContainer {

@@ -70,12 +70,9 @@ const Contact = () => {
 
             <Navigation />
 
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <div className='contactFooter' style={{ backgroundColor: darkMode ? '#2d3239' : '#131313' }}>
 
+            </div>
         </>
     );
 };

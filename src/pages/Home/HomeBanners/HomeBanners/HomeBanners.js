@@ -7,7 +7,7 @@ import './HomeBanners.css';
 import { db } from '../../../../adminPanel/hooks/useFirebase';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import loadingImg from '../../../../assets/loading/1.gif';
-
+import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 SwiperCore.use([Navigation]);
 
 const HomeBanners = () => {
@@ -47,7 +47,15 @@ const HomeBanners = () => {
         })
         return bannerListenerSubscription;
     }, [])
+    const [swiperRef, setSwiperRef] = useState(null);
 
+    const prevHandler = () => {
+        swiperRef.slidePrev();
+    };
+
+    const nextHandler = () => {
+        swiperRef.slideNext();
+    };
     return (
         <div>
             {
@@ -58,11 +66,11 @@ const HomeBanners = () => {
 
                 </> : <>
 
-
                     <Swiper
                         slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
                         effect={"fade"}
-                        navigation={true}
+                        spaceBetween={50} onSwiper={(swiper) => setSwiperRef(swiper)}
+                        navigation={false}
                         autoplay={{
                             delay: 2500,
                             disableOnInteraction: false,
@@ -82,6 +90,11 @@ const HomeBanners = () => {
                         }
 
                     </Swiper>
+
+                    <GrFormPrevious onClick={prevHandler} className="bannerBtnPrev" size={50} />
+                    <GrFormNext onClick={nextHandler} className="bannerBtnNext" size={50} />
+
+
                 </>
             }
 
