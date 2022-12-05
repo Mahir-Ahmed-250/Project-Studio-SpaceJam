@@ -43,4 +43,13 @@
     .bannerImg {
         height: 400px;
     }
+
+    .bannerBtnPrev {
+        margin-left: 10px;
+
+    }
+
+    .bannerBtnNext {
+        margin-left: 70px;
+    }
 }
