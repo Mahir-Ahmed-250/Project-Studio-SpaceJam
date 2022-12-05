@@ -75,39 +75,42 @@ const HomeNav = () => {
                 {
                     !navBackground ?
                         <>
+                            <div >
+                                <h2 className='homeNavName-1' style={{
+                                    color: darkMode ? "#fff" :
+                                        "#ffbb00 "
+                                }} >STUDIO SPACEJAM</h2>
+                            </div>
 
                             <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#1f2227" : "#fff" }}>
                                 <NavLink to="/" className="homeNavLogoAndName-1">
-                                    <img src={logo} height="60" width="60" alt="logo" className='me-2' />
-                                    <h2 className="homeNavName-1" style={{
-                                        color: darkMode ? "#fff" :
-                                            "#ffbb00 "
-                                    }} >STUDIO SPACEJAM</h2>
+                                    <img src={logo} height="90" width="90" alt="logo" className='me-2' />
                                 </NavLink>
+
                                 <div className='homeSideNav'>
                                     <h5 style={{ marginTop: "20px", marginLeft: "10px" }}>
-                                        <NavLink to="/" className="navigation " style={{
+                                        <NavLink to="/" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Home </NavLink>
                                     </h5>
 
                                     <h5 style={{ marginTop: "20px", marginLeft: "10px" }}>
-                                        <NavLink to="/team" className="navigation" style={{
+                                        <NavLink to="/team" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Team </NavLink>
                                     </h5>
 
                                     <h5 style={{ marginTop: "20px", marginLeft: "10px" }}>
-                                        <NavLink to="/portfolio" className="navigation" style={{
+                                        <NavLink to="/portfolio" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Portfolio</NavLink>
                                     </h5>
 
                                     <h5 style={{ marginTop: "20px", marginLeft: "10px", marginBottom: "40px" }}>
-                                        <NavLink to="/contact" className="navigation" style={{
+                                        <NavLink to="/contact" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Contact </NavLink>
