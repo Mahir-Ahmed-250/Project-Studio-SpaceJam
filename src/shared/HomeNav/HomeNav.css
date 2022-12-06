@@ -36,9 +36,10 @@
     margin-top: 30px;
     margin-left: 250px;
     font-family: 'Oswald', sans-serif;
-    font-size: 42px;
+    font-size: 45px;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .homeNavLogoContainer-2 {
@@ -93,6 +94,10 @@
     .homeNavName-3 {
         font-size: 25px;
         margin-top: -3px;
+    }
+
+    .homeSideNav {
+        margin-top: 5vh;
     }
 }
 
