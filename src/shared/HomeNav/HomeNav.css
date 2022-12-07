@@ -7,11 +7,12 @@
 }
 
 .homeSideNav {
-    margin-top: 30vh;
+    margin-top: 20vh;
 }
 
 .sideNavigation {
     font-size: 30px;
+    font-weight: 700;
 }
 
 .homeNavLogoContainer-1 {
@@ -34,9 +35,9 @@
 
 .homeNavName-1 {
     margin-top: 30px;
-    margin-left: 250px;
+    margin-left: 220px;
     font-family: 'Oswald', sans-serif;
-    font-size: 45px;
+    font-size: 48px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;

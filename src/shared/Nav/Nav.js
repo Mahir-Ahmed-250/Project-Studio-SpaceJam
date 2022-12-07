@@ -63,7 +63,7 @@ const Nav = () => {
 
     return (
         <nav className="navbar navbar-expand-md fixed-top" style={{
-            transition: '.5s ease-in-out', backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
+            transition: '.5s ease-in-out', backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#f2f3f6' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
         }}>
             <div className="container">
                 <div className='logoAndName' >

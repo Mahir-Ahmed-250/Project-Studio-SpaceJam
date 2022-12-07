@@ -69,7 +69,7 @@ const HomeNav = () => {
     return (
         <div className='topBar'>
             <nav className="navbar navbar-expand-sm fixed-top" style={{
-                backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#fff' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
+                backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#f2f3f5' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
             }}>
 
                 {
@@ -77,39 +77,39 @@ const HomeNav = () => {
                         <>
                             <div >
                                 <h2 className='homeNavName-1' style={{
-                                    color: darkMode ? "#fff" :
+                                    color: darkMode ? "#f2f3f5" :
                                         "#ffbb00 "
                                 }} >STUDIO SPACEJAM</h2>
                             </div>
 
-                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#1f2227" : "#fff" }}>
+                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#1f2227" : "#f2f3f5" }}>
                                 <NavLink to="/" className="homeNavLogoAndName-1">
                                     <img src={logo} height="90" width="90" alt="logo" className='me-2' />
                                 </NavLink>
 
                                 <div className='homeSideNav'>
-                                    <h5 style={{ marginTop: "20px", marginLeft: "10px" }}>
+                                    <h5 style={{ marginTop: "20px", marginLeft: "0px" }}>
                                         <NavLink to="/" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Home </NavLink>
                                     </h5>
 
-                                    <h5 style={{ marginTop: "20px", marginLeft: "10px" }}>
+                                    <h5 style={{ marginTop: "40px", marginLeft: "0px" }}>
                                         <NavLink to="/team" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Team </NavLink>
                                     </h5>
 
-                                    <h5 style={{ marginTop: "20px", marginLeft: "10px" }}>
+                                    <h5 style={{ marginTop: "40px", marginLeft: "0px" }}>
                                         <NavLink to="/portfolio" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
                                         }}> Portfolio</NavLink>
                                     </h5>
 
-                                    <h5 style={{ marginTop: "20px", marginLeft: "10px", marginBottom: "40px" }}>
+                                    <h5 style={{ marginTop: "40px", marginLeft: "0px", marginBottom: "40px" }}>
                                         <NavLink to="/contact" className="sideNavigation" style={{
                                             textDecoration: "none", color: darkMode ? "#fff" :
                                                 "#ffbb00 "
@@ -118,7 +118,7 @@ const HomeNav = () => {
 
 
                                     <Toggle />
-                                    {
+                                    {/* {
                                         user ?
                                             <div className="adminLogo">
                                                 <div className="nav-item dropdown profileIcon">
@@ -177,7 +177,7 @@ const HomeNav = () => {
                                             </div>
                                             : <>
                                             </>
-                                    }
+                                    } */}
                                 </div>
 
                             </div>

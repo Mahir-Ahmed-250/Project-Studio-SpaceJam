@@ -55,7 +55,7 @@ const Team = () => {
                                             <div className="inner">
                                                 <img className='teamCardImg' src={team.img} alt="" width="100%" />
                                             </div>
-                                            <div className='teamCardTitleContainer' style={{ backgroundColor: darkMode ? "#1f2227" : "#fff" }}>
+                                            <div className='teamCardTitleContainer' style={{ backgroundColor: darkMode ? "#1f2227" : "#f2f3f6" }}>
                                                 <h5 className='teamCardName'>{team.name}</h5>
                                                 <p className='teamCardDesignation'>{team.designation}</p>
                                                 {
