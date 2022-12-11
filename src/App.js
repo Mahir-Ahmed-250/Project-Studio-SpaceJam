@@ -55,7 +55,6 @@ function App() {
   return (
     <Wrapper>
       <div style={{ backgroundColor: darkMode ? "#1f2227" : "#f2f3f6", color: darkMode && "#fff", transition: "0.5s" }}>
-
         <Routes >
           {
             user ? <>
@@ -80,12 +79,9 @@ function App() {
               <Route path="*" element={<Navigate to="/" replace />} />
             </>
           }
-
         </Routes>
-
       </div>
     </Wrapper>
-
   );
 }
 
