@@ -17,8 +17,6 @@ import AdminTeam from './adminPanel/pages/AdminTeam/AdminTeam';
 import AdminPortfolio from './adminPanel/pages/AdminPortfolio/AdminPortfolio';
 import { useState } from 'react';
 
-
-
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
@@ -31,14 +29,12 @@ function App() {
   const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode
   const { user } = useFirebase()
-
   const [counter, setCounter] = useState([])
   useEffect(() => {
     fetch(`https://firestore.googleapis.com/v1/projects/studio-space-jam/databases/(default)/documents/serviceCounter`)
       .then((res) => res.json())
       .then((data) => setCounter(data));
   }, [])
-
 
   const { loading } = useFirebase()
   if (loading) {
@@ -50,7 +46,6 @@ function App() {
       </>
     )
   }
-
 
   return (
     <Wrapper>
