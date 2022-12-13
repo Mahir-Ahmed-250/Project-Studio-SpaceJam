@@ -5,6 +5,7 @@ import logo from '../../../assets/admin/2.png';
 import './AdminHome.css';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../context';
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 const AdminHome = () => {
     const theme = useContext(ThemeContext)
@@ -57,6 +58,7 @@ const AdminHome = () => {
             <Nav />
             <div className="container " style={{ paddingTop: "10%" }}>
                 <BannerTitle title="ADMIN PANEL" />
+                <AdminNavigation />
                 <div className='adminHomeContainer'>
                     <div>
                         <img src={logo} alt="" width="100%" height="100%" />
