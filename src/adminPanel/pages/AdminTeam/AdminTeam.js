@@ -9,6 +9,7 @@ import './AdminTeam.css';
 import SingleTeam from './SingleTeam';
 import loadingImg from '../../../assets/logo/logo.png'
 import LoadingSkeleton from '../../components/LoadingSkeletonTeam/LoadingSkeletonTeam';
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 const AdminTeam = () => {
     const theme = useContext(ThemeContext)
@@ -158,7 +159,10 @@ const AdminTeam = () => {
             <div style={{ paddingTop: "10%" }} className="container">
                 {
                     teams.length < 0 ? <>
-                    </> : <AdminTitle title="Current Team Members" />
+                    </> : <>
+                        <AdminTitle title="Current Team Members" />
+                        <AdminNavigation />
+                    </>
                 }
                 <div className='row'>
                     {

@@ -7,6 +7,7 @@ import AdminTitle from '../../components/AdminTitle/AdminTitle';
 import { db } from '../../hooks/useFirebase';
 import loadingImg from '../../../assets/logo/logo.png';
 import LoadingSkeletonBanner from '../../components/LoadingSkeletonBanner/LoadingSkeletonBanner';
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 
 const AdminHomePortfolio = () => {
@@ -155,6 +156,7 @@ const AdminHomePortfolio = () => {
             <Nav />
             <div style={{ paddingTop: "10%" }} className='container'>
                 <AdminTitle title="Current Home Portfolios" />
+                <AdminNavigation />
             </div>
             <div className="container">
                 {

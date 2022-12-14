@@ -10,6 +10,7 @@ import AdminTitle from '../../components/AdminTitle/AdminTitle';
 import LoadingSkeletonBanner from '../../components/LoadingSkeletonBanner/LoadingSkeletonBanner';
 import { db } from '../../hooks/useFirebase';
 import loadingImg from '../../../assets/logo/logo.png';
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 const AdminPortfolio = () => {
     const theme = useContext(ThemeContext)
@@ -161,6 +162,7 @@ const AdminPortfolio = () => {
 
                     </> : <>
                         <AdminTitle title="Current Portfolios" />
+                        <AdminNavigation />
                     </>
                 }
                 {

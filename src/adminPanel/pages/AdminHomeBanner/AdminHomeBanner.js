@@ -9,6 +9,7 @@ import { db } from '../../hooks/useFirebase';
 import './AdminHomeBanner.css';
 import loadingImg from '../../../assets/logo/logo.png'
 import LoadingSkeletonBanner from '../../components/LoadingSkeletonBanner/LoadingSkeletonBanner';
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 const AdminHomeBanner = () => {
     const theme = useContext(ThemeContext)
@@ -147,9 +148,9 @@ const AdminHomeBanner = () => {
             <Nav />
 
             <div style={{ paddingTop: "12%" }} className="container">
-                {
-                    banners.length > 0 ? <AdminTitle title="Current Home Banners" /> : <></>
-                }
+                <AdminTitle title="Current Home Banners" />
+
+                <AdminNavigation />
                 {
                     loading2 ? <>
                         <LoadingSkeletonBanner />

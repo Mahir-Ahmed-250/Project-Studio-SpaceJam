@@ -19,3 +19,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+@media screen and (max-width: 760px) {
+    .adminServiceCounterContainer {
+        padding-top: 0px;
+        height: 100vh;
+    }
+}

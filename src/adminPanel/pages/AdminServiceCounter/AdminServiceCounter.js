@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import swal from 'sweetalert';
 import Nav from '../../../shared/Nav/Nav';
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 import AdminTitle from '../../components/AdminTitle/AdminTitle';
 import { db } from '../../hooks/useFirebase';
 import './AdminServiceCounter.css';
@@ -84,6 +85,7 @@ const AdminServiceCounter = ({ counter }) => {
                 <div className='adminServiceCounterContainer' >
 
                     <AdminTitle title="Service & Consultancy Counter" />
+                    <AdminNavigation />
                     <div className="form-outline mb-4">
                         <p className='serviceLabel'>Years of Services</p>
                         {
