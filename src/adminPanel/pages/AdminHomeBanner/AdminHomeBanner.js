@@ -146,10 +146,8 @@ const AdminHomeBanner = () => {
     return (
         <>
             <Nav />
-
             <div style={{ paddingTop: "12%" }} className="container">
                 <AdminTitle title="Current Home Banners" />
-
                 <AdminNavigation />
                 {
                     loading2 ? <>

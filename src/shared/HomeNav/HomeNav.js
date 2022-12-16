@@ -69,7 +69,7 @@ const HomeNav = () => {
     return (
         <div className='topBar'>
             <nav className="navbar navbar-expand-sm fixed-top" style={{
-                backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#f2f3f5' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
+                backgroundColor: darkMode ? navBackground ? '#2d3239' : 'transparent' : navBackground ? '#f2f3f6' : 'transparent', boxShadow: navBackground ? "0px 5px 15px rgba(0, 0, 0, 0.1)" : 'none'
             }}>
 
                 {
@@ -77,12 +77,12 @@ const HomeNav = () => {
                         <>
                             <div >
                                 <h2 className='homeNavName-1' style={{
-                                    color: darkMode ? "#f2f3f5" :
+                                    color: darkMode ? "#f2f3f6" :
                                         "#ffbb00 "
                                 }} >STUDIO SPACEJAM</h2>
                             </div>
 
-                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#1f2227" : "#f2f3f5" }}>
+                            <div className='homeNavLogoContainer-1' style={{ background: darkMode ? "#1f2227" : "#f2f3f6" }}>
                                 <NavLink to="/" className="homeNavLogoAndName-1">
                                     <img src={logo} height="90" width="90" alt="logo" className='me-2' />
                                 </NavLink>
