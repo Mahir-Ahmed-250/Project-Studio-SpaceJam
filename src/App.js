@@ -46,33 +46,35 @@ function App() {
       </>
     )
   }
-
   return (
     <Wrapper>
       <div style={{ backgroundColor: darkMode ? "#1f2227" : "#f2f3f6", color: darkMode && "#fff", transition: "0.5s" }}>
         <Routes >
           {
-            user ? <>
-              <Route path="/" element={<Home />} />
-              <Route path="/team" element={<Team />} />
-              <Route path='/portfolio' element={<Portfolios />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/admin' element={<AdminHome />} />
-              <Route path="/admin/homeBanner" element={<AdminHomeBanner />} />
-              <Route path="/admin/counter" element={<AdminServiceCounter counter={counter
-              } />} />
-              <Route path="/admin/homePortfolio" element={<AdminHomePortfolio />} />
-              <Route path="/admin/team" element={<AdminTeam />} />
-              <Route path="/admin/portfolio" element={<AdminPortfolio />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </> : <>
-              <Route path="/" element={<Home />} />
-              <Route path="/team" element={<Team />} />
-              <Route path='/portfolio' element={<Portfolios />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/admin' element={<AdminLogin />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </>
+            user ?
+              <>
+                <Route path="/" element={<Home />} />
+                <Route path="/team" element={<Team />} />
+                <Route path='/portfolio' element={<Portfolios />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/admin' element={<AdminHome />} />
+                <Route path="/admin/homeBanner" element={<AdminHomeBanner />} />
+                <Route path="/admin/counter" element={<AdminServiceCounter counter={counter
+                } />} />
+                <Route path="/admin/homePortfolio" element={<AdminHomePortfolio />} />
+                <Route path="/admin/team" element={<AdminTeam />} />
+                <Route path="/admin/portfolio" element={<AdminPortfolio />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </>
+              :
+              <>
+                <Route path="/" element={<Home />} />
+                <Route path="/team" element={<Team />} />
+                <Route path='/portfolio' element={<Portfolios />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/admin' element={<AdminLogin />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </>
           }
         </Routes>
       </div>
