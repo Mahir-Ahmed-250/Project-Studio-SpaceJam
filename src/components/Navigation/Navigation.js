@@ -59,7 +59,7 @@ const Navigation = () => {
                             onMouseLeave={handleMouseLeave1}
                         >
                             <h2 className="homeNavigationTitle">Home</h2>
-                            <h5 className="homeNavigationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore?</h5>
+
                         </div>
                     </Link>
                 </div>
@@ -71,7 +71,7 @@ const Navigation = () => {
                             onMouseEnter={handleMouseEnter2}
                             onMouseLeave={handleMouseLeave2}>
                             <h2 className="homeNavigationTitle">Team</h2>
-                            <h5 className="homeNavigationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore?</h5>
+
                         </div>
                     </Link>
                 </div>
@@ -83,7 +83,7 @@ const Navigation = () => {
                             onMouseEnter={handleMouseEnter3}
                             onMouseLeave={handleMouseLeave3}>
                             <h2 className="homeNavigationTitle">Portfolio</h2>
-                            <h5 className="homeNavigationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore?</h5>
+
                         </div>
                     </Link>
                 </div>
@@ -95,7 +95,7 @@ const Navigation = () => {
                             onMouseEnter={handleMouseEnter4}
                             onMouseLeave={handleMouseLeave4}>
                             <h2 className="homeNavigationTitle">Contact</h2>
-                            <h5 className="homeNavigationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore?</h5>
+
                         </div>
                     </Link>
                 </div>
