@@ -6,7 +6,7 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import './HomeBanners.css';
 import { db } from '../../../../adminPanel/hooks/useFirebase';
 import { collection, onSnapshot, query } from 'firebase/firestore';
-import loadingImg from '../../../../assets/loading/1.gif';
+import loadingImg from '../../../../assets/loading/loader_lxvi_1.gif';
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 SwiperCore.use([Navigation]);
 
