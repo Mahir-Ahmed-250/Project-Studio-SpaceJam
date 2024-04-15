@@ -60,8 +60,13 @@ const HomeBanners = () => {
         <div>
             {
                 loading ? <>
-
-                    <img style={{ width: "100%", height: "100vh" }} src={loadingImg} alt="" />
+                    <div className="loader">
+                        <div class="loaderContainer ">
+                            <div class="box1"></div>
+                            <div class="box2"></div>
+                            <div class="box3"></div>
+                        </div>
+                    </div>
 
 
                 </> : <>
