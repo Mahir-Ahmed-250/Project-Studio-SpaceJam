@@ -158,3 +158,26 @@
         margin-left: 0;
     }
 }
+
+@media screen and (max-width: 760px) {
+    .fullScreenImage img {
+        height: 294px;
+    }
+
+    .sliderWrap .btnClose {
+        top: 270px;
+        right: 40px;
+    }
+
+    .sliderWrap .btnPrev {
+        top: 60%;
+        transform: translateY(-50%);
+        left: 40px;
+    }
+
+    .sliderWrap .btnNext {
+        top: 60%;
+        transform: translateY(-50%);
+        right: 40px;
+    }
+}
