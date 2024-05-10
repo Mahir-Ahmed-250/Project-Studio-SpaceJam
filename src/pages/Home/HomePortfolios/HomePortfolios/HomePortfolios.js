@@ -84,7 +84,7 @@ const HomePortfolios = () => {
 
                         <SwiperSlide key={portfolio.serial} >
 
-                            <img src={portfolio.img} style={{ height: "400px" }} className="bannerImg" alt="" />
+                            <img src={portfolio.img} className="bannerImg homePortfolioImg" alt="" />
 
                         </SwiperSlide>
                     )

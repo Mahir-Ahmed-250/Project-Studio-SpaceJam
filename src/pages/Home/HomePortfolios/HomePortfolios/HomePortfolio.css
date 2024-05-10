@@ -6,6 +6,10 @@
     display: none;
 }
 
+.homePortfolioImg {
+    height: 400px;
+}
+
 .moreBtn {
     border: none;
     height: 46px;
@@ -23,4 +27,10 @@
 .moreBtn:hover {
     background-position: left bottom;
     color: #fff;
+}
+
+@media screen and (max-width: 760px) {
+    .homePortfolioImg {
+        height: 294px;
+    }
 }
