@@ -36,7 +36,7 @@ const Footer = () => {
                     <div className="col-md-4 footerItem2">
                         <div>
                             <h3 className='footerItemTitle'>Contact Us</h3>
-                            <a href="tel:+8801915583555" style={{ textDecoration: 'none', fontSize: "18px", color: "#fff" }}>Phone: +8801915583555</a>
+                            <a href="tel:+8801755333933" style={{ textDecoration: 'none', fontSize: "18px", color: "#fff" }}>Phone: +8801755333933</a>
                             <br />
                             <br />
                             <a href="mailto:mail.spacejam@gmail.com" style={{ textDecoration: 'none', fontSize: "18px", color: "#fff" }}>Email: mail.spacejam@gmail.com</a>

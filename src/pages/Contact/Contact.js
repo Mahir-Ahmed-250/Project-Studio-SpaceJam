@@ -43,10 +43,10 @@ const Contact = () => {
 
                         </div>
                         <div className='col-lg-3 col-md-6 mb-4'>
-                            <a href="tel:+8801915583555" style={{ textDecoration: "none", color: darkMode ? " #fff" : "#161616" }}>
+                            <a href="tel:+8801755333933" style={{ textDecoration: "none", color: darkMode ? " #fff" : "#161616" }}>
                                 <center className="contactCard ">  <BsPhone size={80} />
                                     <h3 className='contactCardTitle'>Phone No.</h3>
-                                    <h5 className='contactCardDesc'> +8801915583555</h5>
+                                    <h5 className='contactCardDesc'> +8801755333933</h5>
                                 </center>
                             </a>
                         </div>
